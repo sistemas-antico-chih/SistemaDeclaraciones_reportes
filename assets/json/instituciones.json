@@ -1,10 +1,10 @@
 [
 	{
-		"ente_publico": "SECRETARÍA EJECUTIVA DEL SISTEMA ESTATAL ANTICORRUPCIÓN DEL ESTADO DE PUEBLA",
-		"clave": "SESEA PUEBLA",
+		"ente_publico": "MUNICIPIO DE JUÁREZ",
+		"clave": "MUN_JUA",
 		"servidor_publico_recibe": {
-			"nombre": "Juan Perez Tellez",
-			"cargo": "Director general de Responsabilidades y Verificación Patrimonial"
+			"nombre": "Dr. José Luis Anaya Carrasco",
+			"cargo": "Titular del Órgano Interno de Control"
 		}
 	},
 	{
