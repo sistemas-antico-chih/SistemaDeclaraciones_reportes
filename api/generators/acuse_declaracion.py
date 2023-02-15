@@ -41,7 +41,7 @@ class AcuseDeclaracionGenerator(object):
         data =  json.load(d)
         self.data.update(data)
         d.close()
-  
+
     def make_pdf(self):
         env: Environment = Environment(loader=FileSystemLoader('.'))
         env.filters['toSiNo'] = boolToSiNo
