@@ -22,12 +22,12 @@ from api.generators.custom_filters import replaceInstitutionPipe
 
 
 class AcuseDeclaracionGenerator(object):
-    def __init__(self, id: str, data: Dict[str, Any], preliminar: bool = False, publico: bool = False, instituto: str = "MUN_AHU"):
+    def __init__(self, id: str, data: Dict[str, Any], preliminar: bool = False, publico: bool = False, municipio: str = "MUN_AHU"):
         self.id: str = id
         self.data: Dict[str, Any] = data
         self.preliminar = preliminar
         self.publico = publico
-        self.instituto = instituto
+        self.municipio = municipio
 
     def addJson(self):
         json_name: str

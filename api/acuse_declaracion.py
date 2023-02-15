@@ -33,7 +33,7 @@ class AcuseDeclaracion(Resource):
                 data=raw_data['declaracion'],
                 preliminar=raw_data['preliminar'],
                 publico=raw_data['publico'],
-                instituto=raw_data['ente'],
+                municipio=raw_data['municipio'],
             )
 
             pdf_filename = report.make_pdf()
