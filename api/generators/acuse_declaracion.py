@@ -42,6 +42,20 @@ class AcuseDeclaracionGenerator(object):
         self.data.update(data)
         d.close()
 
+    def addInstitucion(self):
+        json_name: str
+        json_name = 'assets/json/instituciones.json'
+        if self.data['tipoDeclaracion'] == "INICIAL" :
+            json_name = 'assets/json/inicio.json'
+        if self.data['tipoDeclaracion'] == "MODIFICACION" :
+            json_name = 'assets/json/modificacion.json'
+        if self.data['tipoDeclaracion'] == "CONCLUSION" :
+            json_name = 'assets/json/conclusion.json'
+        d = open(json_name)
+        data =  json.load(d)
+        self.data.update(data)
+        d.close()     
+
     def make_pdf(self):
         env: Environment = Environment(loader=FileSystemLoader('.'))
         env.filters['toSiNo'] = boolToSiNo

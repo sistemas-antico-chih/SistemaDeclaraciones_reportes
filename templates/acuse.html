@@ -23,7 +23,8 @@
     <p class="text-center mt-100px">
         <!--{{ acuse.servidor_publico_recibe.nombre | replaceInstitution(institucion, 'nombre') }} <br>-->
         {{ anioEjercicio }} <br>
-        {{ datosGenerales.nombre }} <br>
-        {{ acuse.servidor_publico_recibe.cargo | replaceInstitution(institucion, 'cargo') }}
+        {{ owner }} <br>
+        {{ users.institucion.clave}}
+        <!--{{ acuse.servidor_publico_recibe.cargo | replaceInstitution(institucion, 'cargo') }}-->
     </p>
 </article>
