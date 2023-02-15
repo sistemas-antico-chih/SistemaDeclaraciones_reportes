@@ -53,6 +53,7 @@ def replacePipe(value: str, strToReplace: str, replacementStr: str):
     return value.replace(strToReplace, replacementStr)   
 
 def replaceInstitutionPipe(value: str, institutionKey: str, type: str):
+    #if (value and institutionKey and type):
     if (value and institutionKey and type):
         with open('assets/json/instituciones.json') as file:
             data = json.load(file)
