@@ -25,12 +25,10 @@
     </section>
     <p class="text-center">ATENTAMENTE</p>
     <p class="text-center mt-100px">
-        <!--{{ acuse.servidor_publico_recibe.nombre | replaceInstitution(institucion, 'nombre') }} <br>-->
         {{ anioEjercicio }} <br>
         {{ datosGenerales.rfc.rfc }} <br>
-        {{ datosEmpleoCargoComision.nombreEntePublico | replaceInstitution }}
+       <!-- {{ datosEmpleoCargoComision.nombreEntePublico | replaceInstitution }} -->
         {{ datosGenerales.nacionalidad | nationalityFormat }}
         
-        <!--{{ acuse.servidor_publico_recibe.cargo | replaceInstitution(institucion, 'cargo') }}-->
     </p>
 </article>
