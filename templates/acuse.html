@@ -21,8 +21,7 @@
     </section>
     <p class="text-center">ATENTAMENTE</p>
     <p class="text-center mt-100px">
-        <!--{{ acuse.servidor_publico_recibe.nombre | replaceInstitution(institucion, 'nombre') }} <br>-->
-        {{ acuse.servidor_publico_recibe.cargo }}
-        <!--{{ acuse.servidor_publico_recibe.cargo | replaceInstitution(institucion, 'cargo') }}-->
+        {{ acuse.servidor_publico_recibe.nombre | replaceInstitution(institucion, 'nombre') }} <br>
+        {{ acuse.servidor_publico_recibe.cargo | replaceInstitution(institucion, 'cargo') }}
     </p>
 </article>
