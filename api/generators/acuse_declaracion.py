@@ -18,7 +18,7 @@ from api.generators.custom_filters import replacePipe
 from api.generators.custom_filters import nationalityFormatPipe
 from api.generators.custom_filters import dataEmptyPipe
 from api.generators.custom_filters import dateTranslationPipe
-from api.generators.custom_filters import replaceInstitutionPipe
+#from api.generators.custom_filters import replaceInstitutionPipe
 
 
 class AcuseDeclaracionGenerator(object):
@@ -51,7 +51,7 @@ class AcuseDeclaracionGenerator(object):
         env.filters['nationalityFormat'] = nationalityFormatPipe
         env.filters['dataEmpty'] = dataEmptyPipe
         env.filters['dateTranslation'] = dateTranslationPipe
-        env.filters['replaceInstitution'] = replaceInstitutionPipe
+        #env.filters['replaceInstitution'] = replaceInstitutionPipe
         templateName = 'templates/acuse_declaracion.html'
         if self.publico:
             templateName = 'templates/publico/acuse_declaracion.html'
