@@ -52,18 +52,16 @@ def replacePipe(value: str, strToReplace: str, replacementStr: str):
       return value
     return value.replace(strToReplace, replacementStr)   
 
-def replaceInstitutionPipe(value: str, institutionKey: str, type: str):
+def replaceInstitutionPipe(value):
+#def replaceInstitutionPipe(value: str, institutionKey: str, type: str):
     #if (value and institutionKey and type):
-    if (value and institutionKey and type):
+    if (value):
         with open('assets/json/instituciones.json') as file:
             data = json.load(file)
             for item in data:
-                if item['clave'] == institutionKey:
-                    if type == 'ente_publico':
-                        return item['ente_publico']
-                    elif type == 'nombre':
+                if item['ente_publico'] == value:
+                    if type == 'nombre':
                         return item['servidor_publico_recibe']['nombre']
                     elif type == 'cargo':
                         return item['servidor_publico_recibe']['cargo']
-            return value 
     return value
