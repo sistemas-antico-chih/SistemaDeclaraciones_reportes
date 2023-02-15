@@ -57,7 +57,7 @@ def replaceInstitutionPipe(value: str, institutionKey: str, type: str):
         with open('assets/json/instituciones.json') as file:
             data = json.load(file)
             for item in data:
-                if item['clave'] == institutionKey:
+                if item['ente_publico'] == value:
                     if type == 'ente_publico':
                         return item['ente_publico']
                     elif type == 'nombre':
