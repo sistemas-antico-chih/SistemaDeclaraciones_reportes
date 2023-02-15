@@ -18,7 +18,7 @@ class AcuseDeclaracion(Resource):
         self.parser.add_argument('declaracion', type=dict, required=True, help='declaracion is required')
         self.parser.add_argument('preliminar', type=bool, required=False)
         self.parser.add_argument('publico', type=bool, required=False, default=False)
-        self.parser.add_argument('ente', type=str, required=False)
+        self.parser.add_argument('municipio', type=str, required=False)
 
     def post(self):
         API_KEY: str = config('API_KEY', default='')
