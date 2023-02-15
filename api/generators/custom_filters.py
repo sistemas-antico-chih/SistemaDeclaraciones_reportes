@@ -53,7 +53,7 @@ def replacePipe(value: str, strToReplace: str, replacementStr: str):
     return value.replace(strToReplace, replacementStr)   
 
 def replaceInstitutionPipe(value: str, institutionKey: str, type: str):
-    print(value)
+    print('llega')
     value = "MUNINICIO DE HIDALGO DEL PARRAL"
     print(value)
     if (value and institutionKey and type):
