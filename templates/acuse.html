@@ -1,7 +1,8 @@
 <article>
     <h2 class="text-center">
-        {{ acuse.ente_publico | replaceInstitution(institucion, 'ente_publico') }}. <br>
+        <!--{{ acuse.ente_publico | replaceInstitution(institucion, 'ente_publico') }}. <br>-->
         <!--  {{ acuse.tipo_declaracion }} {{ acuse.ejercicio }}. <br> -->
+        {{ datosEmpleoCargoComision.nombreEntePublico }}. <br>
         {{ acuse.tipo_declaracion }} {{ anioEjercicio }}. <br>
         ID DE DECLARACIÓN: {{ _id }} <br>
         {{ acuse.lugar }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
