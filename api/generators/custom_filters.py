@@ -53,6 +53,9 @@ def replacePipe(value: str, strToReplace: str, replacementStr: str):
     return value.replace(strToReplace, replacementStr)   
 
 def replaceInstitutionPipe(value: str, institutionKey: str, type: str):
+    print(value)
+    value = "MUNINICIO DE HIDALGO DEL PARRAL"
+    print(value)
     if (value and institutionKey and type):
         with open('assets/json/instituciones.json') as file:
             data = json.load(file)
