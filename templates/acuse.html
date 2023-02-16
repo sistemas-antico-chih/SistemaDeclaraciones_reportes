@@ -3,9 +3,9 @@
         <!--{{ acuse.ente_publico | replaceInstitution(institucion, 'ente_publico') }}. <br>-->
         <!--  {{ acuse.tipo_declaracion }} {{ acuse.ejercicio }}. <br> -->
         {{ datosEmpleoCargoComision.nombreEntePublico }}. <br>
-        {{ acuse.tipo_declaracion }} {{ anioEjercicio }}. <br>
+        {{ acuse.tipo_declaracion }} {{ anioEjercicio | acuse.ejercicio}}. <br>
         ID DE DECLARACIÓN: {{ _id }} <br>
-        {{ acuse.lugar }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
+        {{ datosEmpleoCargoComision.nombreEntePublico }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
     </h2>
     <ul class="no-decoration mt-80px">
         <li class="bold">C. {{datosGenerales.nombre}} {{datosGenerales.primerApellido}} {{datosGenerales.segundoApellido
