@@ -54,7 +54,7 @@ def replacePipe(value: str, strToReplace: str, replacementStr: str):
 
 def replaceInstitutionPipe(value: str, institutionKey: str, type: str):
     if (value):
-        with open('assets/catalogos/nacionalidades.json') as file:
+        with open('assets/json/instituciones.json') as file:
             data = json.load(file)
             for item in data:
                 if item['clave']==value:
