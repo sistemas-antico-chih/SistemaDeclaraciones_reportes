@@ -25,10 +25,9 @@
     </section>
     <p class="text-center">ATENTAMENTE</p>
     <p class="text-center mt-100px">
-        {{ anioEjercicio }} <br>
-        {{ datosGenerales.rfc.rfc }} <br>
-        {{ datosEmpleoCargoComision.nombreEntePublico | replaceInstitution }}
-        {{ datosGenerales.nacionalidad | nationalityFormat }}
+
+        {{ datosEmpleoCargoComision.nombreEntePublico | replaceInstitution }} <br>
+        {{ acuse.servidor_publico_recibe.cargo }}
         
     </p>
 </article>
