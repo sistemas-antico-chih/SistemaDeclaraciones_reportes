@@ -2,13 +2,8 @@
     <h2 class="text-center">
         <!--{{ acuse.ente_publico | replaceInstitution(institucion, 'ente_publico') }}. <br>-->
         <!--  {{ acuse.tipo_declaracion }} {{ acuse.ejercicio }}. <br> -->
-        {%if datosEmpleoCargoComision = undefined %} 
-            {{acuse.ente_publico}}. 
-        {% else %} 
-            {{ datosEmpleoCargoComision.nombreEntePublico }}.
-        {% endif %}
-        <br>
-        
+        {%if datosEmpleoCargoComision == undefined %} {{acuse.ente_publico}}. {% else %} {{ datosEmpleoCargoComision.nombreEntePublico }}. {% endif %}
+        <br> 
         {{ acuse.tipo_declaracion }} {%if anioEjercicio %} {{ anioEjercicio}}. {% else %} 2023.{% endif %} <br>
         ID DE DECLARACIÓN: {{ _id }} <br>
         {%if datosEmpleoCargoComision.nombreEntePublico %}{{ datosEmpleoCargoComision.nombreEntePublico }} {% else %} {{acuse.lugar}} {% endif %} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
