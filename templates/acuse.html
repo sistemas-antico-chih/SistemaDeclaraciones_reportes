@@ -5,7 +5,7 @@
         {%if datosEmpleoCargoComision.nombreEntePubico %} {{ datosEmpleoCargoComision.nombreEntePublico }}. {% else %} {{acuse.ente_publico}}. {% endif %}<br>
         {{ acuse.tipo_declaracion }} {%if anioEjercicio %} {{ anioEjercicio}}. {% else %} 2023.{% endif %} <br>
         ID DE DECLARACIÓN: {{ _id }} <br>
-        {{ datosEmpleoCargoComision.nombreEntePublico }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
+        {%if datosEmpleoCargoComision.nombreEntePubico %}{{ datosEmpleoCargoComision.nombreEntePublico }} {% else %} {{acuse.lugar}} {% end if %} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
     </h2>
     <ul class="no-decoration mt-80px">
         <li class="bold">C. {{datosGenerales.nombre}} {{datosGenerales.primerApellido}} {{datosGenerales.segundoApellido
