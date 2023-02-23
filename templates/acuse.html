@@ -2,7 +2,7 @@
     <h2 class="text-center">
         <!--{{ acuse.ente_publico | replaceInstitution(institucion, 'ente_publico') }}. <br>-->
         <!--  {{ acuse.tipo_declaracion }} {{ acuse.ejercicio }}. <br> -->
-        {%if datosEmpleoCargoComision === "undefined" %} 
+        {%if datosEmpleoCargoComision = undefined %} 
             {{acuse.ente_publico}}. 
         {% else %} 
             {{ datosEmpleoCargoComision.nombreEntePublico }}.
