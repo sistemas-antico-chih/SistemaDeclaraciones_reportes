@@ -2,9 +2,10 @@
     <h2 class="text-center">
         <!--{{ acuse.ente_publico | replaceInstitution(institucion, 'ente_publico') }}. <br>-->
         <!--  {{ acuse.tipo_declaracion }} {{ acuse.ejercicio }}. <br> -->
-        {%if datosEmpleoCargoComision %} 
-            {{ datosEmpleoCargoComision.nombreEntePublico }}. 
-        {% else %} {{acuse.ente_publico}}. 
+        {%if datosEmpleoCargoComision === "undefined" %} 
+            {{acuse.ente_publico}}. 
+        {% else %} 
+            {{ datosEmpleoCargoComision.nombreEntePublico }}.
         {% endif %}
         <br>
         
@@ -30,8 +31,8 @@
     </section>
     <p class="text-center">ATENTAMENTE</p>
     <p class="text-center mt-100px">
-        {%if datosEmpleoCargoComision %} {{ datosEmpleoCargoComision.nombreEntePublico | replaceInstitution }}. {% else %} {{acuse.ente_publico}}. {% endif %}<br>
-        <!--{{ datosEmpleoCargoComision.nombreEntePublico | replaceInstitution }} <br>-->
+        <!--{%if datosEmpleoCargoComision %} {{ datosEmpleoCargoComision.nombreEntePublico | replaceInstitution }}. {% else %} {{acuse.ente_publico}}. {% endif %}<br>
+        {{ datosEmpleoCargoComision.nombreEntePublico | replaceInstitution }} <br>-->
         {{ acuse.servidor_publico_recibe.cargo }}
     </p>
 </article>
