@@ -62,13 +62,13 @@
     {% endif %}
 {% endif %}
 
-{% if not simplificada %}
+{% if declaracionCompleta %}
     {% if bienesInmuebles %}
-        {% include "templates/publico/situacion_patrimonial/bienes_inmubles.html" %}
+        {% include "templates/situacion_patrimonial/bienes_inmubles.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
                 Bienes inmubles (situación actual)
                 {% else %}
                 Bienes inmubles (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -79,13 +79,13 @@
     {% endif %}
 {% endif %}
 
-{% if not simplificada %}
+{% if declaracionCompleta %}
     {% if vehiculos %}
-        {% include "templates/publico/situacion_patrimonial/vehiculos.html" %}
+        {% include "templates/situacion_patrimonial/vehiculos.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
                 Vehículos (situación actual)
                 {% else %}
                 Vehículos (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -96,15 +96,15 @@
     {% endif %}
 {% endif %}
 
-{% if not simplificada %}
+{% if declaracionCompleta %}
     {% if bienesMuebles %}
-        {% include "templates/publico/situacion_patrimonial/bienes_mubles.html" %}
+        {% include "templates/situacion_patrimonial/bienes_mubles.html" %}
     {% else %}
         <article>
             <h3>
                 {% if tipoDeclaracion == 'INICIAL' %}
                     Bienes muebles (situación actual)
-                {% elif tipoDeclaracion == 'CONCLUCION' %}
+                {% elif tipoDeclaracion == 'CONCLUSION' %}
                 {% else %}
                     Bienes muebles (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
                 {% endif %}
@@ -114,13 +114,13 @@
     {% endif %}
 {% endif %}
 
-{% if not simplificada %}
+{% if declaracionCompleta %}
     {% if inversionesCuentasValores %}
-        {% include "templates/publico/situacion_patrimonial/inversiones.html" %}
+        {% include "templates/situacion_patrimonial/inversiones.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
                     Inversiones, cuentas bancarias u otro tipo de valores (situación actual)
                 {% else %}
                     Inversiones, cuentas bancarias u otro tipo de valores (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -131,13 +131,13 @@
     {% endif %}
 {% endif %}
 
-{% if not simplificada %}
+{% if declaracionCompleta %}
     {% if adeudosPasivos %}
-        {% include "templates/publico/situacion_patrimonial/adeudos.html" %}
+        {% include "templates/situacion_patrimonial/adeudos.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
                     Adeudos/Pasivos (situación actual)
                 {% else %}
                     Adeudos/Pasivos (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -148,13 +148,13 @@
     {% endif %}
 {% endif %}
 
-{% if not simplificada %}
+{% if declaracionCompleta %}
     {% if prestamoComodato %}
-        {% include "templates/publico/situacion_patrimonial/prestamo_terceros.html" %}
+        {% include "templates/situacion_patrimonial/prestamo_terceros.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
                     Préstamos o comodato por terceros (situación actual)
                 {% else %}
                     Préstamos o comodato por terceros (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
