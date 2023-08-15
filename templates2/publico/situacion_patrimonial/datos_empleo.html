@@ -80,50 +80,44 @@
         <div class="column right-size text-justify text-light white-background">{{ datosEmpleoCargoComision.domicilioMexico.entidadFederativa.valor }}</div>
       </div>
     {% endif %}
-    {% if datosEmpleoCargoComision.domicilioExtranjero %}
+  {% endif %}
+  {% if datosEmpleoCargoComision.domicilioExtranjero %}
+    <div class="row">
+        <div class="column left-size text-left blue-background">CALLE</div>
+        <div class="column right-size text-justify text-light white-background">
+            {{ datosEmpleoCargoComision.domicilioExtranjero.calle }} </div>
+    </div>
+    <div class="row">
+        <div class="column left-size text-left blue-background">NÚMERO EXTERIOR</div>
+        <div class="column right-size text-justify text-light white-background">
+            {{ datosEmpleoCargoComision.domicilioExtranjero.numeroExterior }}</div>
+    </div>
+    {% if datosEmpleoCargoComision.domicilioExtranjero.numeroInterior %}
         <div class="row">
-            <div class="column left-size text-left blue-background">CALLE</div>
+            <div class="column left-size text-left blue-background">NÚMERO INTERIOR</div>
             <div class="column right-size text-justify text-light white-background">
-                {{ datosEmpleoCargoComision.domicilioExtranjero.calle }} </div>
-        </div>
-        <div class="row">
-            <div class="column left-size text-left blue-background">NÚMERO EXTERIOR</div>
-            <div class="column right-size text-justify text-light white-background">
-                {{ datosEmpleoCargoComision.domicilioExtranjero.numeroExterior }}</div>
-        </div>
-        {% if datosEmpleoCargoComision.domicilioExtranjero.numeroInterior %}
-            <div class="row">
-                <div class="column left-size text-left blue-background">NÚMERO INTERIOR</div>
-                <div class="column right-size text-justify text-light white-background">
-                    {{ datosEmpleoCargoComision.domicilioExtranjero.numeroInterior | dataEmpty }}</div>
-            </div>
-        {% endif %}
-        <div class="row">
-            <div class="column left-size text-left blue-background">CÓDIGO POSTAL</div>
-            <div class="column right-size text-justify text-light white-background">
-                {{ datosEmpleoCargoComision.domicilioExtranjero.codigoPostal }}</div>
-        </div>
-        <div class="row">
-            <div class="column left-size text-left blue-background">Ciudad</div>
-            <div class="column right-size text-justify text-light white-background">
-                {{ datosEmpleoCargoComision.domicilioExtranjero.ciudadLocalidad }}</div>
-        </div>
-        <div class="row">
-            <div class="column left-size text-left blue-background">estado</div>
-            <div class="column right-size text-justify text-light white-background">
-                {{ datosEmpleoCargoComision.domicilioExtranjero.estadoProvincia }}</div>
-        </div>
-        <div class="row">
-            <div class="column left-size text-left blue-background">país</div>
-            <div class="column right-size text-justify text-light white-background">
-                {{ datosEmpleoCargoComision.domicilioExtranjero.pais|countryFormat }}</div>
+                {{ datosEmpleoCargoComision.domicilioExtranjero.numeroInterior | dataEmpty }}</div>
         </div>
     {% endif %}
-  {% endif %}
-  {% if datosEmpleoCargoComision.aclaracionesObservaciones %}
     <div class="row">
-      <div class="column left-size text-left blue-background">Aclaraciones/Observaciones</div>
-      <div class="column right-size text-justify text-light white-background">{{ datosEmpleoCargoComision.aclaracionesObservaciones }}</div>
+        <div class="column left-size text-left blue-background">CÓDIGO POSTAL</div>
+        <div class="column right-size text-justify text-light white-background">
+            {{ datosEmpleoCargoComision.domicilioExtranjero.codigoPostal }}</div>
+    </div>
+    <div class="row">
+        <div class="column left-size text-left blue-background">Ciudad</div>
+        <div class="column right-size text-justify text-light white-background">
+            {{ datosEmpleoCargoComision.domicilioExtranjero.ciudadLocalidad }}</div>
+    </div>
+    <div class="row">
+        <div class="column left-size text-left blue-background">estado</div>
+        <div class="column right-size text-justify text-light white-background">
+            {{ datosEmpleoCargoComision.domicilioExtranjero.estadoProvincia }}</div>
+    </div>
+    <div class="row">
+        <div class="column left-size text-left blue-background">país</div>
+        <div class="column right-size text-justify text-light white-background">
+            {{ datosEmpleoCargoComision.domicilioExtranjero.pais|countryFormat }}</div>
     </div>
   {% endif %}
 </article>
