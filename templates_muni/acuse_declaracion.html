@@ -12,23 +12,23 @@
 {% if datosGenerales%}
   <!-- Situación patrimonial -->
 
-  {% include "templates/publico/acuse.html" %}
+  {% include "templates/acuse.html" %}
 
   <!-- Situación patrimonial -->
 
-  {% include "templates/publico/declaracion.html" %}
+  {% include "templates/declaracion.html" %}
 
 {% endif %}
 
   <!-- Situación patrimonial -->
   <div class="situacion_patrimonial">
-    {% include "templates/publico/situacion_patrimonial.html" %}
+    {% include "templates/situacion_patrimonial.html" %}
   </div>
 
   <!-- Intereses -->
   {% if declaracionCompleta %}
     <div class="intereses">
-      {% include "templates/publico/intereses.html" %}
+      {% include "templates/intereses.html" %}
     </div>
   {% endif %}
   

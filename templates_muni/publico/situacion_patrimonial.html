@@ -1,5 +1,5 @@
 {% if datosGenerales %}
-    {% include "templates/situacion_patrimonial/datos_generales.html" %}
+    {% include "templates/publico/situacion_patrimonial/datos_generales.html" %}
 {% else %}
     <article>
         <h3>Datos Generales</h3>
@@ -7,26 +7,17 @@
     </article>
 {% endif %}
 
-{% if domicilioDeclarante %}
-    {% include "templates/situacion_patrimonial/domicilio_declarante.html" %}
-{% else %}
-    <article>
-        <h3>Domicilio del declarante</h3>
-        <div class="text-center">Información no disponible</div>
-    </article>
-{% endif %}
-
 {% if datosCurricularesDeclarante %}
-    {% include "templates/situacion_patrimonial/datos_curriculares.html" %}
+    {% include "templates/publico/situacion_patrimonial/datos_curriculares.html" %}
 {% else %}
     <article>
         <h3>Datos curriculares del declarante</h3>
-        <div class="text-center">Información no disponible</div>
+        <div class="text-center">Información no disponible en publico</div>
     </article>
 {% endif %}
 
 {% if datosEmpleoCargoComision %}
-    {% include "templates/situacion_patrimonial/datos_empleo.html" %}
+    {% include "templates/publico/situacion_patrimonial/datos_empleo.html" %}
 {% else %}
     <article>
         <h3>Datos empleo, cargo o comisión que inicia</h3>
@@ -35,7 +26,7 @@
 {% endif %}
 
 {% if experienciaLaboral %}
-    {% include "templates/situacion_patrimonial/experiencia_laboral.html" %}
+    {% include "templates/publico/situacion_patrimonial/experiencia_laboral.html" %}
 {% else %}
     <article>
         <h3>Experiencia laboral (últimos cinco empleos)</h3>
@@ -43,30 +34,8 @@
     </article>
 {% endif %}
 
-{% if declaracionCompleta %}
-    {% if datosPareja %}
-        {% include "templates/situacion_patrimonial/datos_pareja.html" %}
-    {% else %}
-        <article>
-            <h3>Datos de la Pareja</h3>
-            <div class="text-center">Información no disponible</div>
-        </article>
-    {% endif %}
-{% endif %}
-
-{% if declaracionCompleta %}
-    {% if datosDependientesEconomicos %}
-        {% include "templates/situacion_patrimonial/datos_dependiente.html" %}
-    {% else %}
-        <article>
-            <h3>Datos del dependiente económico</h3>
-            <div class="text-center">Información no disponible</div>
-        </article>
-    {% endif %}
-{% endif %}
-
 {% if ingresos %}
-    {% include "templates/situacion_patrimonial/ingresos_neto.html" %}
+    {% include "templates/publico/situacion_patrimonial/ingresos_neto.html" %}
 {% else %}
     <article>
         <h3>
@@ -84,7 +53,7 @@
 
 {% if not tipoDeclaracion == 'MODIFICACION' %}
     {% if actividadAnualAnterior %}
-        {% include "templates/situacion_patrimonial/servidor_publico.html" %}
+        {% include "templates/publico/situacion_patrimonial/servidor_publico.html" %}
     {% else %}
         <article>
             <h3>Actividad Anual Anterior</h3>
@@ -93,14 +62,13 @@
     {% endif %}
 {% endif %}
 
-
 {% if declaracionCompleta %}
     {% if bienesInmuebles %}
-        {% include "templates/situacion_patrimonial/bienes_inmubles.html" %}
+        {% include "templates/publico/situacion_patrimonial/bienes_inmubles.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
                 Bienes inmubles (situación actual)
                 {% else %}
                 Bienes inmubles (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -113,11 +81,11 @@
 
 {% if declaracionCompleta %}
     {% if vehiculos %}
-        {% include "templates/situacion_patrimonial/vehiculos.html" %}
+        {% include "templates/publico/situacion_patrimonial/vehiculos.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
                 Vehículos (situación actual)
                 {% else %}
                 Vehículos (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -130,13 +98,13 @@
 
 {% if declaracionCompleta %}
     {% if bienesMuebles %}
-        {% include "templates/situacion_patrimonial/bienes_mubles.html" %}
+        {% include "templates/publico/situacion_patrimonial/bienes_mubles.html" %}
     {% else %}
         <article>
             <h3>
                 {% if tipoDeclaracion == 'INICIAL' %}
                     Bienes muebles (situación actual)
-                {% elif tipoDeclaracion == 'CONCLUSION' %}
+                {% elif tipoDeclaracion == 'CONCLUCION' %}
                 {% else %}
                     Bienes muebles (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
                 {% endif %}
@@ -148,11 +116,11 @@
 
 {% if declaracionCompleta %}
     {% if inversionesCuentasValores %}
-        {% include "templates/situacion_patrimonial/inversiones.html" %}
+        {% include "templates/publico/situacion_patrimonial/inversiones.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
                     Inversiones, cuentas bancarias u otro tipo de valores (situación actual)
                 {% else %}
                     Inversiones, cuentas bancarias u otro tipo de valores (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -165,11 +133,11 @@
 
 {% if declaracionCompleta %}
     {% if adeudosPasivos %}
-        {% include "templates/situacion_patrimonial/adeudos.html" %}
+        {% include "templates/publico/situacion_patrimonial/adeudos.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
                     Adeudos/Pasivos (situación actual)
                 {% else %}
                     Adeudos/Pasivos (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -182,11 +150,11 @@
 
 {% if declaracionCompleta %}
     {% if prestamoComodato %}
-        {% include "templates/situacion_patrimonial/prestamo_terceros.html" %}
+        {% include "templates/publico/situacion_patrimonial/prestamo_terceros.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
                     Préstamos o comodato por terceros (situación actual)
                 {% else %}
                     Préstamos o comodato por terceros (entre el 1 de enero y 31 de diciembre del año inmediato anterior)

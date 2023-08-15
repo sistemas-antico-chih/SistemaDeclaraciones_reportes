@@ -1,0 +1,28 @@
+<article>
+    <h2 class="text-center">
+        <!--{{ acuse.ente_publico | replaceInstitution(institucion, 'ente_publico') }}. <br>-->
+        <!--  {{ acuse.tipo_declaracion }} {{ acuse.ejercicio }}. <br> -->
+        {{ datosEmpleoCargoComision.nombreEntePublico }}. <br>
+        {{ acuse.tipo_declaracion }} {%if anioEjercicio %} {{ anioEjercicio}}. {% else %} 2023.{% endif %} <br>
+        ID DE DECLARACIÓN: {{ _id }} <br>
+        {{ datosEmpleoCargoComision.nombreEntePublico }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
+    </h2>
+    <ul class="no-decoration mt-80px">
+        <li class="bold">C. {{datosGenerales.nombre}} {{datosGenerales.primerApellido}} {{datosGenerales.segundoApellido | dataEmpty}}</li>
+        <li class="bold">CURP: {{datosGenerales.curp}}</li>
+        <li class="bold">RFC: {% if datosGenerales.rfc %} {{datosGenerales.rfc.rfc}}{{datosGenerales.rfc.homoClave}} {% endif %}</li>
+        <li class="bold">E-MAIL: {% if datosGenerales.correoElectronico %} {{datosGenerales.correoElectronico.personal}} {% endif %}</li>
+    </ul>
+    <h3>PRESENTE.</h3>
+    <section>
+        <p>
+            {{ acuse.texto1_cuerpo_acuse }}
+        </p>
+        <p>{{ acuse.texto2_cuerpo_acuse }}</p>
+    </section>
+    <p class="text-center">ATENTAMENTE</p>
+    <p class="text-center mt-100px">
+        {{ datosEmpleoCargoComision.nombreEntePublico | replaceInstitution }} <br>
+        {{ acuse.servidor_publico_recibe.cargo }}
+    </p>
+</article>
