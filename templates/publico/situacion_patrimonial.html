@@ -64,11 +64,11 @@
 
 {% if declaracionCompleta %}
     {% if bienesInmuebles %}
-        {% include "templates/situacion_patrimonial/bienes_inmubles.html" %}
+        {% include "templates/publico/situacion_patrimonial/bienes_inmubles.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
                 Bienes inmubles (situación actual)
                 {% else %}
                 Bienes inmubles (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -81,11 +81,11 @@
 
 {% if declaracionCompleta %}
     {% if vehiculos %}
-        {% include "templates/situacion_patrimonial/vehiculos.html" %}
+        {% include "templates/publico/situacion_patrimonial/vehiculos.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
                 Vehículos (situación actual)
                 {% else %}
                 Vehículos (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -98,13 +98,13 @@
 
 {% if declaracionCompleta %}
     {% if bienesMuebles %}
-        {% include "templates/situacion_patrimonial/bienes_mubles.html" %}
+        {% include "templates/publico/situacion_patrimonial/bienes_mubles.html" %}
     {% else %}
         <article>
             <h3>
                 {% if tipoDeclaracion == 'INICIAL' %}
                     Bienes muebles (situación actual)
-                {% elif tipoDeclaracion == 'CONCLUSION' %}
+                {% elif tipoDeclaracion == 'CONCLUCION' %}
                 {% else %}
                     Bienes muebles (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
                 {% endif %}
@@ -116,11 +116,11 @@
 
 {% if declaracionCompleta %}
     {% if inversionesCuentasValores %}
-        {% include "templates/situacion_patrimonial/inversiones.html" %}
+        {% include "templates/publico/situacion_patrimonial/inversiones.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
                     Inversiones, cuentas bancarias u otro tipo de valores (situación actual)
                 {% else %}
                     Inversiones, cuentas bancarias u otro tipo de valores (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -133,11 +133,11 @@
 
 {% if declaracionCompleta %}
     {% if adeudosPasivos %}
-        {% include "templates/situacion_patrimonial/adeudos.html" %}
+        {% include "templates/publico/situacion_patrimonial/adeudos.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
                     Adeudos/Pasivos (situación actual)
                 {% else %}
                     Adeudos/Pasivos (entre el 1 de enero y 31 de diciembre del año inmediato anterior)
@@ -150,11 +150,11 @@
 
 {% if declaracionCompleta %}
     {% if prestamoComodato %}
-        {% include "templates/situacion_patrimonial/prestamo_terceros.html" %}
+        {% include "templates/publico/situacion_patrimonial/prestamo_terceros.html" %}
     {% else %}
         <article>
             <h3>
-                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUSION' %}
+                {% if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'CONCLUCION' %}
                     Préstamos o comodato por terceros (situación actual)
                 {% else %}
                     Préstamos o comodato por terceros (entre el 1 de enero y 31 de diciembre del año inmediato anterior)

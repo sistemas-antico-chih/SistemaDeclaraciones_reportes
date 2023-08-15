@@ -33,7 +33,7 @@
     <div class="column right-size text-justify text-light white-background">{{ datosEmpleoCargoComision.funcionPrincipal }}</div>
   </div>
   <div class="row">
-    <div class="column left-size text-left blue-background">Fecha de {{ 'Toma' if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'MODIFICACION' else 'Conclusión'}} de Posesión</div>
+    <div class="column left-size text-left blue-background">Fecha de {{ 'Toma' if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'MODIFICACION' else 'Conclución'}} de Posesion</div>
     <div class="column right-size text-justify text-light white-background">{{ datosEmpleoCargoComision.fechaTomaPosesion|formatdatetime }}</div>
   </div>
   {% if datosEmpleoCargoComision.telefonoOficina %}
