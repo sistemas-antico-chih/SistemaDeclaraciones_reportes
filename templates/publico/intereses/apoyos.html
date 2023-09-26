@@ -6,6 +6,10 @@
     {% if apoyos is defined %}
         {% for item in apoyos.apoyo %}
             {% if item.beneficiarioPrograma.valor == 'DECLARANTE' or item.beneficiarioPrograma.valor == "OTRO(A)"%}
+            <div class="row">
+                <div class="column left-size text-left blue-background">Tipo Operación</div>
+                <div class="column right-size text-justify text-light white-background">{{item.tipoOperacion}}</div>
+              </div>
                 <div class="row">
                     <div class="column left-size text-left blue-background">Tipo Persona</div>
                     <div class="column right-size text-justify text-light white-background">{{item.tipoPersona}}</div>

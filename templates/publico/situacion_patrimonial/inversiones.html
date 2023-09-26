@@ -12,6 +12,10 @@
     {% if inversionesCuentasValores is defined %}
         {% for item in inversionesCuentasValores.inversion %}
             {% if item.titular[0].valor == 'DECLARANTE' %}
+            <div class="row">
+                <div class="column left-size text-left blue-background">Tipo Operación</div>
+                <div class="column right-size text-justify text-light white-background">{{item.tipoOperacion}}</div>
+              </div>
                 <div class="row">
                     <div class="column left-size text-left blue-background">Titular</div>
                     <div class="column right-size text-justify text-light white-background">{% for titular in item.titular %}{{titular.valor}}{% if not loop.last %}<br>{% endif %}{% endfor %}</div>
