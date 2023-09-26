@@ -5,6 +5,10 @@
     {% endif %}
     {% if beneficiosPrivados is defined %}
         {% for item in beneficiosPrivados.beneficio %}
+        <div class="row">
+            <div class="column left-size text-left blue-background">Tipo Operación</div>
+            <div class="column right-size text-justify text-light white-background">{{item.tipoOperacion}}</div>
+          </div>
             <div class="row">
                 <div class="column left-size text-left blue-background">Beneficiario</div>
                 <div class="column right-size text-justify text-light white-background">{% for beneficiario in item.beneficiario %}{{beneficiario.valor}}{% if not loop.last %}<br>{% endif %}{% endfor %}</div>

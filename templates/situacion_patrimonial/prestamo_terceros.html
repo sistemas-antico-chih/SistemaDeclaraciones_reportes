@@ -11,6 +11,10 @@
     {% endif %}
     {% if prestamoComodato is defined %}
         {% for item in prestamoComodato.prestamo %}
+        <div class="row">
+            <div class="column left-size text-left blue-background">Tipo Operación</div>
+            <div class="column right-size text-justify text-light white-background">{{item.tipoOperacion}}</div>
+          </div>
             <div class="row">
                 <div class="column left-size text-left blue-background">tipo de Bien</div>
                 <div class="column right-size text-justify text-light white-background">
