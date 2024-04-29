@@ -1,5 +1,13 @@
 <article>
-  <h3>Datos empleo, cargo o comisión que inicia</h3>
+  <h3>
+    {% if tipoDeclaracion == 'INICIAL' %}
+      Datos del empleo, cargo o comisión que inicia
+    {% elif tipoDeclaracion == 'MODIFICACION' %}
+      Datos del empleo, cargo o comisión reportados
+    {% else %}
+      Datos del empleo, cargo o comisión que concluye
+    {% endif %}
+  </h3>
   <div class="row">
     <div class="column left-size text-left blue-background">Nivel/Orden de Gobierno</div>
     <div class="column right-size text-justify text-light white-background">{{ datosEmpleoCargoComision.nivelOrdenGobierno | replace('_', ' ') }} </div>

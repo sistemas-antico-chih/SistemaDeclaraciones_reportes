@@ -5,7 +5,7 @@
 	},
 	{
 		"clave": "MUNICIPIO DE ALDAMA",
-		"valor": "C. JUAN CARLOS SANTIESTEBAN AGUILAR"
+		"valor": "ING. JUAN CARLOS SANTIESTEBAN AGUILAR"
 	},
 	{
 		"clave": "MUNICIPIO DE ALLENDE",
@@ -13,11 +13,11 @@
 	},
 	{
 		"clave": "MUNICIPIO DE AQUILES SERDÁN",
-      		"valor": "LIC. LUIS GREGORIO GUERRA LÓPEZ"
+      	"valor": "LIC. LUIS GREGORIO GUERRA LÓPEZ"
 	},
 	{
 		"clave": "MUNICIPIO DE ASCENSIÓN",
-		"valor": "LIC. IVONNE DE LA HOYA VENZOR"
+		"valor": "LIC. HEBER ALONSO CHÁVEZ PRIETO"
 	},
 	{
 		"clave": "MUNICIPIO DE BACHINIVA",
@@ -25,19 +25,19 @@
 	},
 	{
 		"clave": "MUNICIPIO DE BALLEZA",
-		"valor": "C. ALONSO BENJAMÍN CARAVEO YUNES"
+		"valor": "C. MARÍA GABRIELA NEVÁREZ CANO"
 	},
 	{
 		"clave": "MUNICIPIO DE BATOPILAS",
-		"valor": "C. EDUARDO AARÓN RUELAS FERNÁNDEZ"
+		"valor": "C. EDGAR RUELAS HERNÁNDEZ"
 	},
 	{
 		"clave": "MUNICIPIO DE BOCOYNA",
-		"valor": "C. NOEL ROMERO PÉREZ TORRES"
+		"valor": "LIC. NOEL ROMERO PÉREZ TORRES"
 	},
 	{
 		"clave": "MUNICIPIO DE BUENAVENTURA",
-		"valor": "LIC. ROGELIO PACHECO FLORES"
+		"valor": "C. EDGAR EMILIO FLORES RASCÓN"
 	},
 	{
 		"clave": "MUNICIPIO DE CAMARGO",
@@ -49,15 +49,15 @@
 	},
 	{
 		"clave": "MUNICIPIO DE CASAS GRANDES",
-		"valor": "C. JESÚS ALFREDO AVITIA PONCE DE LEÓN"
+		"valor": "C. JUAN ARMANDO LÓPEZ VALENZUELA"
 	},
 	{
 		"clave": "MUNICIPIO DE CHIHUAHUA",
-		"valor": "C. MARIANA DE LACHICA HUERTA"
+		"valor": "MTRA. CARMEN YAZMÍN DIALGO POSADA"
 	},
 	{
 		"clave": "MUNICIPIO DE CHÍNIPAS",
-		"valor": "C. HORTENCIA LÓPEZ AYÓN"
+		"valor": "MTRA. HORTENCIA LÓPEZ AYÓN"
 	},
 	{
 		"clave": "MUNICIPIO DE CORONADO",
@@ -69,15 +69,15 @@
 	},
 	{
 		"clave": "MUNICIPIO DE CUAUHTÉMOC",
-		"valor": "C. ANA GISELA LUNA MORENO"
+		"valor": "LIC. ANA GISELA LUNA MORENO"
 	},
 	{
 		"clave": "MUNICIPIO DE CUSIHUIRIACHI",
-		"valor": "C. KAREN PAULINA GUTIÉRREZ GUTIÉRREZ"
+		"valor": "LIC. KAREN PAULINA GUTIÉRREZ GUTIÉRREZ"
 	},
 	{
 		"clave": "MUNICIPIO DE DELICIAS",
-		"valor": "C. ALBERTO VIESCA FRANCO"
+		"valor": "LIC. ALBERTO VIESCA FRANCO"
 	},
 	{
 		"clave": "MUNICIPIO DE DR. BELISARIO DOMÍNGUEZ",
@@ -89,7 +89,7 @@
 	},
 	{
 		"clave": "MUNICIPIO DE GALEANA",
-		"valor": "C. AMMON DAYER LEBARON TRACY"
+		"valor": "LIC. ALDO YÁNEZ PIÑÓN"
 	},
 	{
 		"clave": "MUNICIPIO DE GÓMEZ FARÍAS",
@@ -105,7 +105,7 @@
 	},
 	{
 		"clave": "MUNICIPIO DE GUADALUPE",
-		"valor": "C. ABIMAEL CHÁVEZ GARAY"
+		"valor": "LIC. MIGUEL ÁNGEL AMAYA ALVILLAR"
 	},
 	{
 		"clave": "MUNICIPIO DE GUADALUPE Y CALVO",
@@ -113,43 +113,43 @@
 	},
 	{
 		"clave": "MUNICIPIO DE GUAZAPARES",
-		"valor": "C. JOEL GUILLERMO BUSTILLOS RAMÍREZ"
+		"valor": "C. BEATRIZ RAMOS ORDUÑO"
 	},
 	{
 		"clave": "MUNICIPIO DE GUERRERO",
-		"valor": "C. BERNARDO BANDA BANDA"
+		"valor": "LIC. BERNARDO BANDA BANDA"
 	},
 	{
 		"clave": "MUNICIPIO DE HIDALGO DEL PARRAL",
-		"valor": "C. DANIELA IVETH SÁNCHEZ MOLINA"
+		"valor": "LIC. LUISA FERNANDA PORTILLO ALFARO"
 	},
 	{
 		"clave": "MUNICIPIO DE HUEJOTITÁN",
-		"valor": "C. FLORA RUÍZ CORRAL"
+		"valor": "C. RAMÓN ANTONIO ALONSO GUZMÁN"
 	},
 	{
 		"clave": "MUNICIPIO DE IGNACIO ZARAGOZA",
-		"valor": "C. JAVIER CHÁVEZ CÓRDOVA"
+		"valor": "LIC. JAVIER CHÁVEZ CÓRDOVA"
 	},
 	{
 		"clave": "MUNICIPIO DE JANOS",
-		"valor": "C. OSCAR MARIO BAEZA TORRES"
+		"valor": "LIC. EVER ADRIÁN ESTRADA RICO"
 	},
 	{
 		"clave": "MUNICIPIO DE JIMÉNEZ",
-		"valor": "C. JESÚS RUIZ ESPARZA LÓPEZ"
+		"valor": "LIC. JESÚS RUIZ ESPARZA LÓPEZ"
 	},
 	{
 		"clave": "MUNICIPIO DE JULIMES",
-		"valor": "C. GUADALUPE SALINAS ISLAS"
+		"valor": "LIC. GUADALUPE SALINAS ISLAS"
 	},
 	{
 		"clave": "MUNICIPIO DE LA CRUZ",
-		"valor": "C. JESÚS ENRIQUE LEAL TARÍN"
+		"valor": "LIC. JESÚS ENRIQUE LEAL TARÍN"
 	},
 	{
 		"clave": "MUNICIPIO DE LÓPEZ",
-		"valor": "PROFR. HEBERTO CABALLERO ROMÁN"
+		"valor": "C. MAGALY MONTES LÓPEZ"
 	},
 	{
 		"clave": "MUNICIPIO DE MADERA",
@@ -157,19 +157,19 @@
 	},
 	{
 		"clave": "MUNICIPIO DE MAGUARICHI",
-		"valor": "C. CÉSAR JOAQUÍN HERNÁNDEZ QUEZADA"
+		"valor": "LIC. JOSÉ LUIS CARRASCO QUINTANA"
 	},
 	{
 		"clave": "MUNICIPIO DE MANUEL BENAVIDES",
-		"valor": "C. JESÚS ALFREDO AVITIA PONCE DE LEÓN"
+		"valor": "LIC. JESÚS ALFREDO AVITIA PONCE DE LEÓN"
 	},
 	{
 		"clave": "MUNICIPIO DE MATACHÍ",
-		"valor": "C. JESÚS ALFREDO AVITIA PONDE DE LEÓN"
+		"valor": "LIC. JESÚS ALFREDO AVITIA PONDE DE LEÓN"
 	},
 	{
 		"clave": "MUNICIPIO DE MATAMOROS",
-		"valor": "LIC. JESÚS ENRIQUE PEÑA VÁZQUEZ"
+		"valor": "LIC. EFRAÍN IGNACIO ÁVILA"
 	},
 	{
 		"clave": "MUNICIPIO DE MEOQUI",
@@ -177,7 +177,7 @@
 	},
 	{
 		"clave": "MUNICIPIO DE MORELOS",
-		"valor": "C. JOSÉ DE LORETO JAVALERA BOJORQUEZ"
+		"valor": "C. MARVIN ABIMAEL VÁZQUEZ GÓMEZ"
 	},
 	{
 		"clave": "MUNICIPIO DE MORIS",
@@ -193,7 +193,7 @@
 	},
 	{
 		"clave": "MUNICIPIO DE NUEVO CASAS GRANDES",
-		"valor": "LIC. VICTOR HUGO HERNÁNDEZ PEÑA"
+		"valor": "LIC. ANA MARÍA ROJAS GARCÍA"
 	},
 	{
 		"clave": "MUNICIPIO DE OCAMPO",
@@ -201,11 +201,11 @@
 	},
 	{
 		"clave": "MUNICIPIO DE OJINAGA",
-		"valor": "C. ANDRÉS RAMOS DE ANDA"
+		"valor": "ING. MARCO ANTONIO OGAZ CORDERO"
 	},
 	{
 		"clave": "MUNICIPIO DE PRÁXEDIS G. GUERRERO",
-		"valor": "C. JOSÉ GUADALUPE FLORES MARTÍNEZ"
+		"valor": "LIC. ARTURO NÁJERA GONZÁLEZ"
 	},
 	{
 		"clave": "MUNICIPIO DE RIVA PALACIO",
@@ -213,11 +213,11 @@
 	},
 	{
 		"clave": "MUNICIPIO DE ROSALES",
-		"valor": "C. MARCIAL ROMUALDO MÁRQUEZ GUTIÉRREZ"
+		"valor": "LIC. JUAN OCTAVIO GONZÁLEZ ALVÍDREZ"
 	},
 	{
 		"clave": "MUNICIPIO DE ROSARIO",
-		"valor": "C. ERNESTO PANDO RODRÍGUEZ"
+		"valor": "C. MAYRA PATRICIA CASILLAS LOYA"
 	},
 	{
 		"clave": "MUNICIPIO DE SAN FRANCISCO DE BORJA",
@@ -225,7 +225,7 @@
 	},
 	{
 		"clave": "MUNICIPIO DE SAN FRANCISCO DE CONCHOS",
-		"valor": "C. JESÚS TALAMANTES LÓPEZ"
+		"valor": "LIC. JESÚS TALAMANTES LÓPEZ"
 	},
 	{
 		"clave": "MUNICIPIO DE SAN FRANCISCO DEL ORO",
@@ -233,15 +233,15 @@
 	},
 	{
 		"clave": "MUNICIPIO DE SANTA BÁRBARA",
-		"valor": "C. JOSÉ ANTONIO BILBAO MARTÍNEZ"
+		"valor": "C. JOSÉ MARTÍN MARTÍNEZ RUEDA"
 	},
 	{
 		"clave": "MUNICIPIO DE SANTA ISABEL",
-		"valor": "C. FERNANDO JACQUEZ"
+		"valor": "LIC. PAOLA CHACÓN PARADA"
 	},
 	{
 		"clave": "MUNICIPIO DE SATEVÓ",
-		"valor": "C. MIRIAM SOCORRO NAVA GÓMEZ"
+		"valor": "LIC. MIRIAM SOCORRO NAVA GÓMEZ"
 	},
 	{
 		"clave": "MUNICIPIO DE SAUCILLO",
@@ -261,6 +261,6 @@
 	},
 	{
 		"clave": "MUNICIPIO DE VALLE DE ZARAGOZA",
-		"valor": "C. MISAEL HOMERO MÁRQUEZ MORALES"
+		"valor": "LIC. CARLOS TIBURCIO SALCIDO GÓMEZ"
 	}
 ]
