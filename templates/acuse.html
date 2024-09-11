@@ -1,11 +1,9 @@
 <article>
     <h2 class="text-center">
-        <!--{{ acuse.ente_publico | replaceInstitution(institucion, 'ente_publico') }}. <br>-->
-        <!--  {{ acuse.tipo_declaracion }} {{ acuse.ejercicio }}. <br> -->
-        {{ datosEmpleoCargoComision.nombreEntePublico }}. <br>
-        {{ acuse.tipo_declaracion }} {%if anioEjercicio %} {{ anioEjercicio}}. {% else %} 2023.{% endif %} <br>
+        {{ ente_publico }} <br>
+        {{ acuse.tipo_declaracion }} {{ anioEjercicio }}. <br>
         ID DE DECLARACIÓN: {{ _id }} <br>
-        {{ datosEmpleoCargoComision.nombreEntePublico }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
+        {{ lugar }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
     </h2>
     <ul class="no-decoration mt-80px">
         <li class="bold">C. {{datosGenerales.nombre}} {{datosGenerales.primerApellido}} {{datosGenerales.segundoApellido | dataEmpty}}</li>
