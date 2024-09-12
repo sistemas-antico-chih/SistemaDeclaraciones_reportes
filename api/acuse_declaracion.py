@@ -10,6 +10,7 @@ from flask_restful import Resource
 
 from api.generators.acuse_declaracion import AcuseDeclaracionGenerator
 
+
 class AcuseDeclaracion(Resource):
     def __init__(self):
         self.parser: RequestParser = RequestParser(bundle_errors=True)
