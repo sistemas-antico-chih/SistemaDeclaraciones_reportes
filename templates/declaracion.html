@@ -7,6 +7,7 @@
     </p>
     <ul class="no-decoration mt-80px">
         <li><span class="bold">ID DE DECLARACIÓN: </span>{{ _id }}</li>
+        <li><span class="bold">NOMBRE: </span>C. {{datosGenerales.nombre}} {{datosGenerales.primerApellido | dataEmpty}} {{datosGenerales.segundoApellido | dataEmpty}}</li>
         <li><span class="bold">RFC: </span>{% if datosGenerales.rfc %}
             {{datosGenerales.rfc.rfc}}{{datosGenerales.rfc.homoClave}} {% endif %}</li>
         <li><span class="bold">FECHA DE RECEPCIÓN:</span> {{ updatedAt | formatdatetime }}</li>
