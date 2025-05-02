@@ -1,12 +1,10 @@
 <article>
     <h2 class="text-center">{{ ente_publico }}.</h2>
     <p class="text-center">{{ declaracion.subtitulo }} </p>
-    <p class="text-center"> {{ declaracion.tipo_declaracion }} {%if anioEjercicio %} {{ anioEjercicio}}. {% else %}
-        2023.{% endif %}
+    <p class="text-center"> {{ declaracion.tipo_declaracion }} {{ anioEjercicio}}.
     </p>
     <ul class="no-decoration mt-80px">
         <li><span class="bold">ID DE DECLARACIÓN: </span>{{ _id }}</li>
-        <li><span class="bold">NOMBRE: </span>C. {{datosGenerales.nombre}} {{datosGenerales.primerApellido | dataEmpty}} {{datosGenerales.segundoApellido | dataEmpty}}</li>
         <li><span class="bold">FECHA DE RECEPCIÓN:</span> {{ updatedAt | formatdatetime }}</li>
     </ul>
     <h3>PRESENTE.</h3>
