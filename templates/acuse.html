@@ -2,9 +2,7 @@
     <h2 class="text-center">
         {{ ente_publico }} <br>
         {{ acuse.tipo_declaracion }} {{ anioEjercicio }}. <br>
-        <!--ID DE DECLARACIÓN: {{ _id }} <br>-->
-        ID DE DECLARACIÓN: {{ declaraciones }} <br>
-        ID DE DECLARACIÓN: {% if declaraciones %} {{declaraciones}} {% else %} {{_id}} {% endif %} <br>
+        ID DE DECLARACIÓN: {{ _id }} <br>
         {{ lugar }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
     </h2>
     <ul class="no-decoration mt-80px">
