@@ -6,7 +6,7 @@
         {{ lugar }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
     </h2>
     <ul class="no-decoration mt-80px">
-        <li class="bold">C. {{datosGenerales.nombre}} {{datosGenerales.primerApellido}} {{datosGenerales.segundoApellido | dataEmpty}}</li>
+        <li class="bold">C. {{datosGenerales.nombre}} {{datosGenerales.primerApellido | dataEmpty}} {{datosGenerales.segundoApellido | dataEmpty}}</li>
         <li class="bold">CURP: {{datosGenerales.curp}}</li>
         <li class="bold">RFC: {% if datosGenerales.rfc %} {{datosGenerales.rfc.rfc}}{{datosGenerales.rfc.homoClave}} {% endif %}</li>
         <li class="bold">E-MAIL: {% if datosGenerales.correoElectronico %} {{datosGenerales.correoElectronico.personal}} {% endif %}</li>
