@@ -4,7 +4,8 @@
     <p class="text-center"> {{ declaracion.tipo_declaracion }} {{ anioEjercicio }}.
     </p>
     <ul class="no-decoration mt-80px">
-        <li><span class="bold">ID DE DECLARACIÓN: </span>{{ _id }}</li>
+        <!--<li><span class="bold">ID DE DECLARACIÓN: </span>{{ _id }}</li>-->
+        <li><span class="bold">ID DE DECLARACIÓN: </span>{% if declaraciones is defined%} {{ declaraciones }} {% else %} {{ _id }} {% endif %}</li>
         <li><span class="bold">RFC: </span>{% if datosGenerales.rfc %} {{datosGenerales.rfc.rfc}}{{datosGenerales.rfc.homoClave}} {% endif %}</li>
         <li><span class="bold">FECHA DE RECEPCIÓN:</span> {{ updatedAt | formatdatetime }}</li>
     </ul>
