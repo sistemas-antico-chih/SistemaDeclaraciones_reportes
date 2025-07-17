@@ -44,4 +44,4 @@ class AcuseDeclaracion(Resource):
             return response#send_file(pdf_filename, attachment_filename=pdf_filename)
         except Exception as e:
             logging.exception(e)
-            return { 'sucess': False, 'message': 'BAD REQUEST' }, 400a
+            return { 'sucess': False, 'message': 'BAD REQUEST' }, 400

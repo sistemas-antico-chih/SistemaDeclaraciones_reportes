@@ -46,11 +46,11 @@ def nationalityFormatPipe(value):
                 if item['clave']==value:
                     return item['valor']
     return ''
-
-def replacePipe(value: str, strToReplace: str, replacementStr: str):
+    
+def replacePipe(value: str, strToReplace: str, replacementStr: str): 
     if (not value or not strToReplace or not replacementStr):
       return value
-    return value.replace(strToReplace, replacementStr)
+    return value.replace(strToReplace, replacementStr)   
 
 # def replaceInstitutionPipe(value: str, institutionKey: str, type: str):
 #     if (value and institutionKey and type):
@@ -64,5 +64,5 @@ def replacePipe(value: str, strToReplace: str, replacementStr: str):
 #                         return item['servidor_publico_recibe']['nombre']
 #                     elif type == 'cargo':
 #                         return item['servidor_publico_recibe']['cargo']
-#             return value
+#             return value 
 #     return value
