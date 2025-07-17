@@ -15,7 +15,7 @@ RUN pip install -r requirements.txt
 # Copy all the files
 COPY . .
 
-EXPOSE 3002
+EXPOSE 3185
 
 # Command to run on container start
 CMD [ "python", "./flask_app.py"]
