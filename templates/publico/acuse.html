@@ -1,7 +1,7 @@
 <article>
     <h2 class="text-center">
         {{ ente_publico }} <br>
-        <!--{{ acuse.tipo_declaracion }} --> {{ anioEjercicio }}. <br>
+        {{ acuse.tipo_declaracion }} {{ anioEjercicio }}. <br>
         <!-- ID DE DECLARACIÓN: {{ _id }} <br>-->
         ID DE DECLARACIÓN: {% if declaraciones is defined%} {{ declaraciones }} {% else %} {{ _id }} {% endif %} <br>
         {{ lugar }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
