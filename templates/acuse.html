@@ -3,7 +3,7 @@
         {{ ente_publico }} <br>
         {{ acuse.tipo_declaracion }} {{ anioEjercicio }}. <br>
         <!-- ID DE DECLARACIÓN: {{ _id }} <br>-->
-        ID DE DECLARACIÓN: {% if declaraciones is defined%} {{ declaraciones }} {% else %} {{ _id }} {% endif %} <br>
+        IID DE DECLARACIÓN: {% if declaraciones is defined%} {{ declaraciones }} {% else %} {{ _id }} {% endif %} <br>
         {{ lugar }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
     </h2>
     <ul class="no-decoration mt-80px">
