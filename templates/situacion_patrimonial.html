@@ -1,35 +1,4 @@
-<!--
-{% if tipoDeclaracion ==='AVISO' %}
-    {% if datosGenerales %}
-        {% include "templates/situacion_patrimonial/datos_generales.html" %}
-    {% else %}
-        <article>
-            <h3>Datos Generales</h3>
-            <div class="text-center">Información no disponible</div>
-        </article>
-    {% endif %}
 
-    {% if domicilioDeclarante %}
-        {% include "templates/situacion_patrimonial/domicilio_declarante.html" %}
-    {% else %}
-        <article>
-            <h3>Domicilio del declarante</h3>
-            <div class="text-center">Información no disponible</div>
-        </article>
-    {% endif %}
-
-
-    {% if datosEmpleoCargoComision %}
-        {% include "templates/situacion_patrimonial/datos_empleo.html" %}
-    {% else %}
-        <article>
-            <h3>Datos empleo, cargo o comisión que inicia</h3>
-            <div class="text-center">Información no disponible</div>
-        </article>
-    {% endif %}
- 
-{% else %}
--->
     {% if datosGenerales %}
         {% include "templates/situacion_patrimonial/datos_generales.html" %}
     {% else %}
@@ -228,6 +197,4 @@
             </article>
         {% endif %}
     {% endif %}
-<!--
-{% endif %}
--->
+
