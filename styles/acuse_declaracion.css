@@ -96,8 +96,8 @@ html body > #declarationType {
   font-size: 11px;
   string-set: heading-right content();
   visibility: hidden;
-  /*position: absolute;*/
-  background-color: red;
+  position: absolute;
+  right: -200 px;
 }
 
 body {
