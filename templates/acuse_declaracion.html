@@ -9,7 +9,7 @@
 <body>
   <span id="declarationType">Declaración {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') |
     replace('CONCLUSION','CONCLUSIÓN') }}
-    COMPLE
+    {{ declaracionCompleta ? 'COMPLETA' : 'SIMPLE' }}
     
   </span>
 
