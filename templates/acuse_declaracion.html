@@ -10,7 +10,7 @@
   <span id="declarationType">Declaración {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') |
     replace('CONCLUSION','CONCLUSIÓN') }}
 
-    <p>{{ declaracionCompleta ? 'COMPLETAA' : 'SSIMPLE' }}</p>
+    {{ declaracionCompleta === 'true' ? 'COMPLETA' : 'SIMPLE' }}
 
   </span>
 
