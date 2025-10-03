@@ -31,7 +31,7 @@
     line-height: 15pt;
     text-align: right;
     font-weight: bold;
-    width: 180px;
+    width: 300px;
   }
 
   @bottom-right {
@@ -97,7 +97,6 @@ html body > #declarationType {
   string-set: heading-right content();
   visibility: hidden;
   position: absolute;
-  right: -200 px;
 }
 
 body {
