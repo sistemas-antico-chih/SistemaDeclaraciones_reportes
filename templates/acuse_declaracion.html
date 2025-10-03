@@ -10,7 +10,7 @@
   <span id="declarationType">Declaración {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') |
     replace('CONCLUSION','CONCLUSIÓN') }}
     valor: "{{ declaracionCompleta }}"
-    {% if declaracionCompleta === true %} entra {% endif %}
+    {% if vehiculos %} entra {% endif %}
   </span>
 
   {% if datosGenerales%}
