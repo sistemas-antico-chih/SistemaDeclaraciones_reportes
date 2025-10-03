@@ -9,8 +9,11 @@
 <body>
   <span id="declarationType">Declaración {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') |
     replace('CONCLUSION','CONCLUSIÓN') }}
-    valor: "{{ declaracionCompleta }}"
-    {{ vehiculos }} 
+    {% if declaracionCompleta %}
+  
+    algo
+  
+  {% endif %}
   </span>
 
   {% if datosGenerales%}
