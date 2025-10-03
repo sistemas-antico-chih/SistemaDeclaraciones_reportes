@@ -9,14 +9,8 @@
 <body>
   <span id="declarationType">Declaración {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') |
     replace('CONCLUSION','CONCLUSIÓN') }}
-    <!--{%if declaracionCompleta %} COMPLETA {% else %} SIMPLE { % endif %}-->
     {{ declaracionCompleta ? 'COMPLETA' : 'SIMPLE' }}
-    <div *ngIf="!declaracionCompleta; else simpleBlock">
-      SIIMPLE
-    </div>
-    <ng-template #simpleBlock>
-      COMPLETAAAA
-    </ng-template>
+    
   </span>
 
   {% if datosGenerales%}
