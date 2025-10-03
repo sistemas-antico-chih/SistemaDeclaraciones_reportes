@@ -7,17 +7,17 @@
 </head>
 
 <body>
-  <span id="declarationType">Declaración {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') | replace('CONCLUSION','CONCLUSIÓN') }} 
-     <div *ngIf="declaracionCompleta; else simpleBlock">
-  COMPLETA
-</div>
-
-<ng-template #simpleBlock>
-  SIMPLE
-</ng-template>
+  <span id="declarationType">Declaración {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') |
+    replace('CONCLUSION','CONCLUSIÓN') }}
+    <div *ngIf="!declaracionCompleta; else simpleBlock">
+      SIIMPLE
+    </div>
+    <ng-template #simpleBlock>
+      COMPLETAAAA
+    </ng-template>
   </span>
 
-{% if datosGenerales%}
+  {% if datosGenerales%}
   <!-- Situación patrimonial -->
 
   {% include "templates/acuse.html" %}
@@ -26,7 +26,7 @@
 
   {% include "templates/declaracion.html" %}
 
-{% endif %}
+  {% endif %}
 
   <!-- Situación patrimonial -->
   <div class="situacion_patrimonial">
@@ -35,11 +35,11 @@
 
   <!-- Intereses -->
   {% if declaracionCompleta %}
-    <div class="intereses">
-      {% include "templates/intereses.html" %}
-    </div>
+  <div class="intereses">
+    {% include "templates/intereses.html" %}
+  </div>
   {% endif %}
-  
+
 </body>
 
 </html>
