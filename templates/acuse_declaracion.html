@@ -8,7 +8,7 @@
 
 <body>
   <span id="declarationType">Declaración {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') | replace('CONCLUSION','CONCLUSIÓN') }} 
-    {% if declaracionCompleta == true %} COMPLETA { % else %} SIMPLE { % endif %}
+   {{declaracionCompleta ? 'COMPLETA' : 'SIMPLE'}}
   </span>
 
 {% if datosGenerales%}
