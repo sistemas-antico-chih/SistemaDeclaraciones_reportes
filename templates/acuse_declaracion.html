@@ -10,7 +10,13 @@
   <span id="declarationType">Declaración {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') |
     replace('CONCLUSION','CONCLUSIÓN') }}
 
-    {{ declaracionCompleta === 'true' ? 'COMPLETA' : 'SIMPLE' }}
+    <div *ngIf="declaracionCompleta === 'true'; else simpleBlock">
+  COMPLETA
+</div>
+
+<ng-template #simpleBlock>
+  SIMPLE
+</ng-template>
 
   </span>
 
