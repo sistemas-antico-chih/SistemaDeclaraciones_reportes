@@ -9,7 +9,7 @@
 <body>
   <span id="declarationType">Declaración {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') |
     replace('CONCLUSION','CONCLUSIÓN') }}
-    aqiii: "" {{ declaracionCompleta }}
+    aqiii: DECLARACION COMPLETA = {{ declaracionCompleta }}
     <div *ngIf="!declaracionCompleta; else simpleBlock">
       SIIMPLE
     </div>
