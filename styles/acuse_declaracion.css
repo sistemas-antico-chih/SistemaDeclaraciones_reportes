@@ -97,6 +97,7 @@ html body > #declarationType {
   string-set: heading-right content();
   visibility: hidden;
   position: absolute;
+  color: red;
 }
 
 body {
