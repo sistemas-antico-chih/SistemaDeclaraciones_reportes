@@ -1,4 +1,180 @@
 <article>
+  {% if tipoDeclaracion == 'AVISO' %}
+    <!-- 🔹 Espacio reservado para tus campos personalizados -->
+    <h3>Datos del empleo, cargo o comisión que concluye y que inicia</h3>
+    <h4>Datos del empleo que concluye</h4>
+    <div class="row">
+      <div class="column left-size text-left blue-background">Área de Adscripción que concluye</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.areaAdscripcionConcluye }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Fecha de Conclusión del encargo</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.fechaConclusionEncargo | formatdatetime }}
+      </div>
+    </div>
+
+    <h4>Datos del empleo que inicia</h4>
+    <div class="row">
+      <div class="column left-size text-left blue-background">Área de Adscripción que inicia</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.areaAdscripcion }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Fecha de inicio del encargo</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.fechaTomaPosesion | formatdatetime }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Nombre Ente Público</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.nombreEntePublico }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Nivel de Empleo, Cargo o Comisión</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.nivelEmpleoCargoComision }}
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="column left-size text-left blue-background">¿Contratado Por Honorarios?</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.contratadoPorHonorarios | toSiNo }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Función Principal</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.funcionPrincipal }}
+      </div>
+    </div>
+
+  {% else %}
+    <h3>
+      {% if tipoDeclaracion == 'INICIAL' %}
+        Datos del empleo, cargo o comisión que inicia
+      {% elif tipoDeclaracion == 'MODIFICACION' %}
+        Datos del empleo, cargo o comisión actual
+      {% else %}
+        Datos del empleo, cargo o comisión que concluye
+      {% endif %}
+    </h3>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Nivel/Orden de Gobierno</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.nivelOrdenGobierno | replace('_', ' ') }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Ámbito Público</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.ambitoPublico | replace('_', ' ') }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Nombre Ente Público</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.nombreEntePublico }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Área de Adscripción</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.areaAdscripcion }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Empleo, Cargo o Comisión</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.empleoCargoComision }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">¿Contratado Por Honorarios?</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.contratadoPorHonorarios | toSiNo }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Nivel de Empleo, Cargo o Comisión</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.nivelEmpleoCargoComision }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">Función Principal</div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.funcionPrincipal }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column left-size text-left blue-background">
+        Fecha de {{ 'Toma' if tipoDeclaracion == 'INICIAL' or tipoDeclaracion == 'MODIFICACION' else 'Conclución' }} de Posesión
+      </div>
+      <div class="column right-size text-justify text-light white-background">
+        {{ datosEmpleoCargoComision.fechaTomaPosesion | formatdatetime }}
+      </div>
+    </div>
+
+    {% if datosEmpleoCargoComision.telefonoOficina %}
+      <div class="row">
+        <div class="column left-size text-left blue-border-bottom blue-background">Teléfono Oficina</div>
+        <div class="column text-justify text-light white-background" style="width: 29%">
+          {{ datosEmpleoCargoComision.telefonoOficina.telefono }}
+        </div>
+        <div class="column text-left blue-background blue-border-bottom blue-border-top" style="width: 10%">Ext.</div>
+        <div class="column text-justify text-light white-background" style="width: 25%">
+          {{ datosEmpleoCargoComision.telefonoOficina.extension }}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="row white-background-wd-100">
+      <h4 class="text-left no-margin">
+        Domicilio
+        {% if datosEmpleoCargoComision.domicilioMexico %} México
+        {% elif datosEmpleoCargoComision.domicilioExtranjero %} Extranjero
+        {% endif %}
+      </h4>
+    </div>
+
+    {% if datosEmpleoCargoComision.domicilioMexico %}
+      <!-- (Tu bloque completo del domicilio en México y extranjero aquí, sin cambios) -->
+    {% endif %}
+
+    {% if datosEmpleoCargoComision.aclaracionesObservaciones %}
+      <div class="row">
+        <div class="column left-size text-left blue-background">Aclaraciones/Observaciones</div>
+        <div class="column right-size text-justify text-light white-background">
+          {{ datosEmpleoCargoComision.aclaracionesObservaciones }}
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+</article>
+
+
+<!--<article>
   <h3>
     {% if tipoDeclaracion == 'INICIAL' %}
       Datos del empleo, cargo o comisión que inicia
@@ -137,3 +313,4 @@
     </div>
   {% endif %}
 </article>
+-->
