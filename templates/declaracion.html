@@ -4,13 +4,43 @@
     <p class="text-center"> {{ declaracion.tipo_declaracion }} {{ anioEjercicio }}.
     </p>
     <ul class="no-decoration mt-80px">
-        <!--<li><span class="bold">ID DE DECLARACIÓN: </span>{{ _id }}</li>-->
-        <li><span class="bold">ID DE DECLARACIÓN: </span>{% if declaraciones is defined%} {{ declaraciones }} {% else %} {{ _id }} {% endif %}</li>
-        <li><span class="bold">RFC: </span>{% if datosGenerales.rfc %} {{datosGenerales.rfc.rfc}}{{datosGenerales.rfc.homoClave}} {% endif %}</li>
+        <li><span class="bold">ID DE DECLARACIÓN: </span>{% if declaraciones is defined%} {{ declaraciones }} {% else %}
+            {{ _id }} {% endif %}</li>
+        <li><span class="bold">RFC: </span>{% if datosGenerales.rfc %}
+            {{datosGenerales.rfc.rfc}}{{datosGenerales.rfc.homoClave}} {% endif %}</li>
         <li><span class="bold">FECHA DE RECEPCIÓN:</span> {{ updatedAt | formatdatetime }}</li>
     </ul>
     <h3>PRESENTE.</h3>
-        <section>
-            <p>{{ declaracion.texto_declaratoria }}</p>
-        </section>
+    <section>
+        {% if tipoDeclaracion ='AVISO' %}
+        <p>
+            C. {{datosGenerales.nombre}} {{datosGenerales.primerApellido | dataEmpty}} {{datosGenerales.segundoApellido
+            | dataEmpty}} con
+            RFC: {% if datosGenerales.rfc %} {{datosGenerales.rfc.rfc}}{{datosGenerales.rfc.homoClave}} {% endif %}
+            {{ declaracion.texto_declaratoria }}
+            
+        </p>
+        <br>
+        <h4>MANIFESTACIONES</h4>
+        <ul class="no-decoration mt-80px">
+            <ol>QUE, EL AVISO POR CAMBIO DE DEPENDENCIA QUE BAJO PROTESTA DE DECIR VERDAD PRESENTO ANTE ESE ORGANO 
+                INTERNO DE CONTROL, CON FECHA <span class="bold">{{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}</span> 
+                ES AUTÉNTICA Y ATRIBUIBLE A MI PERSONA.</ol>
+            <ol>QUE, PARA EL ENVÍO DEL AVISO REFERIDO EN EL PÁRRAFO ANTERIOR, UTILICÉ COMO USUARIO MI CLAVE ÚNICA DE 
+                REGISTRO DE POBLACIÓN Y CONTRASEÑA CON LOS QUE INGRESO AL SISTEMA DECLARANET, POR LO QUE ES DE MI 
+                EXCLUSIVA RESPONSABILIDAD SU USO, ASÍ COMO LA INFORMACIÓN REMITIDA A TRAVÉS DE LOS MEDIOS REMOTOS DE 
+                COMUNICACIÓN ELECTRÓNICA Y LAS CONSECUENCIAS JURÍDICAS QUE DE ELLO DERIVE.</ol>
+            <ol>BAJO PROTESTA DE DECIR VERDAD, PRESENTO A USTED EL PRESENTE AVISO DE CAMBIO DE DEPENDENCIA DENTRO 
+                DEL MISMO ORDEN DE GOBIERNO, CONFORME A LO DISPUESTO EN LOS ARTÍCULOS 108 DE LA CONSTITUCIÓN 
+                POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS, 32 Y 33 SEGUNDO PARRAFO, DE LA LEY GENERAL DE 
+                RESPONSABILIDADES ADMINISTRATIVAS Y NORMA CUARTA REFERENTE A LOS PLAZOS DE PRESENTACIÓN DE
+                DECLARACIONES, DE LAS NORMAS E INSTRUCTIVO PARA EL LLENADO Y PRESENTACIÓN DEL FORMATO DE 
+                DECLARACIONES, PUBLICADO EN EL DIARIO OFICIAL DE LA FEDERACIÓN DEL 23 DE SEPTIEMBRE DE 2019</ol>
+        </ul>
+        {% else %}
+            <p>
+            {{ declaracion.texto_declaratoria }}
+            </p>
+        {% endif %}
+    </section>
 </article>
