@@ -13,8 +13,7 @@
         {% if tipoDeclaracion =='AVISO' %}
         <p>
             C. {{datosGenerales.nombre}} {{datosGenerales.primerApellido | dataEmpty}} {{datosGenerales.segundoApellido
-            | dataEmpty}} con
-            RFC: {% if datosGenerales.rfc %} {{datosGenerales.rfc.rfc}}{{datosGenerales.rfc.homoClave}} {% endif %}
+            | dataEmpty}}
             {{ declaracion.texto_declaratoria }}
 
         </p>
@@ -24,7 +23,7 @@
             <li>QUE, EL AVISO POR CAMBIO DE DEPENDENCIA QUE BAJO PROTESTA DE DECIR VERDAD PRESENTO ANTE ESE ORGANO
                 INTERNO DE CONTROL, CON FECHA <span class="bold">{{ updatedAt | formatdatetime('%d de %B de %Y') |
                     dateTranslation }}</span> ES AUTÉNTICA Y ATRIBUIBLE A MI PERSONA.</li>
-                    
+
             <li>QUE, PARA EL ENVÍO DEL AVISO REFERIDO EN EL PÁRRAFO ANTERIOR, UTILICÉ COMO USUARIO MI CLAVE ÚNICA DE
                 REGISTRO DE POBLACIÓN Y CONTRASEÑA CON LOS QUE INGRESO AL SISTEMA DECLARANET, POR LO QUE ES DE MI
                 EXCLUSIVA RESPONSABILIDAD SU USO, ASÍ COMO LA INFORMACIÓN REMITIDA A TRAVÉS DE LOS MEDIOS REMOTOS DE
