@@ -207,3 +207,17 @@ article .row:last-child .white-background {
   border: 1px solid #54b4eb;
   border-width: 1px 2px;
 }
+
+/* === Bloque específico para sección MANIFESTACIONES === */
+.manifestaciones-list {
+  list-style-type: decimal;   /* Números automáticos */
+  margin-top: 20px;
+  margin-left: 30px;
+  padding-left: 10px;
+}
+
+.manifestaciones-list li {
+  margin-bottom: 15px;       /* Salto de línea entre cada punto */
+  line-height: 1.5;
+  text-align: justify;
+}
