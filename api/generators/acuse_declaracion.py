@@ -51,6 +51,8 @@ class AcuseDeclaracionGenerator(object):
         template = env.get_template(templateName)
         self.addJson()
         body_html: str = template.render(self.data)
+        print(json.dumps(self.data, indent=2, default=str))
+
         # pdf_filename: str = f'reports/acuse-{self.id}.pdf'
         stylesheets: List[CSS] = [CSS(filename='styles/acuse_declaracion.css')]
         if self.preliminar:
