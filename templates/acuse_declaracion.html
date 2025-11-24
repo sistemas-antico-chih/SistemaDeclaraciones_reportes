@@ -15,7 +15,7 @@
       {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') | replace('CONCLUSION','CONCLUSIÓN') }}
       {{ declaracionCompleta ? 'completa' : 'simple' }}
 
-      {% if tipoDeclaracion == 'MODIFICACION' and updatedAt.month != 5 %}
+      {% if tipoDeclaracion == 'MODIFICACION' and updatedAt and updatedAt.month != 5 %}
         EXTEMPORÁNEA
       {% endif %}
     {% endif %}
