@@ -8,7 +8,6 @@
 
 <body>
   <span id="declarationType">
-<p>DEBUG: {{ updatedAt }} ({{ updatedAt.__class__ }})</p>
 
   {% if tipoDeclaracion == 'AVISO' %}
 
@@ -28,8 +27,13 @@
       simple
     {% endif %}
 
-    {# --- Reglas para EXTEMPORÁNEA --- #}
-    {% if tipoDeclaracion == 'MODIFICACION' and updatedAt and updatedAt.month != 5 %}
+    {# --- Obtener mes desde string ISO --- #}
+    {% if updatedAt %}
+      {% set mes = updatedAt[5:7] %}
+    {% endif %}
+
+    {# --- Validación EXTEMPORÁNEA solo si NO es mayo --- #}
+    {% if tipoDeclaracion == 'MODIFICACION' and mes != '05' %}
       EXTEMPORÁNEA
     {% endif %}
 
