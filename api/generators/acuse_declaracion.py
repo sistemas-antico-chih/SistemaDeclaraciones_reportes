@@ -50,6 +50,8 @@ class AcuseDeclaracionGenerator(object):
             templateName = 'templates/publico/acuse_declaracion.html'
         template = env.get_template(templateName)
         self.addJson()
+        print("TIPO updatedAt:", type(self.data.get("updatedAt")))
+        print("VALOR updatedAt:", self.data.get("updatedAt"))
         body_html: str = template.render(self.data)
 
         # pdf_filename: str = f'reports/acuse-{self.id}.pdf'
