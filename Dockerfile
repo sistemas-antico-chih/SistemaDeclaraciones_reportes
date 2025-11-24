@@ -11,6 +11,8 @@ COPY requirements.txt .
 
 # Install dependencies
 RUN pip install -r requirements.txt
+RUN pip install qrcode[pil]
+
 
 # Copy all the files
 COPY . .

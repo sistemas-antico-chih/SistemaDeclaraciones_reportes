@@ -1,5 +1,9 @@
 import requests
 import json
+import qrcode
+import base64
+import io
+
 
 from datetime import datetime
 from typing import Any
@@ -50,6 +54,7 @@ class AcuseDeclaracionGenerator(object):
             templateName = 'templates/publico/acuse_declaracion.html'
         template = env.get_template(templateName)
         self.addJson()
+        self.data["qr_code"] = self.generar_qr_base64()
         body_html: str = template.render(self.data)
 
         # pdf_filename: str = f'reports/acuse-{self.id}.pdf'
@@ -60,3 +65,16 @@ class AcuseDeclaracionGenerator(object):
             stylesheets.append(CSS(filename='styles/publico.css'))
 
         return HTML(string=body_html, encoding='utf8').write_pdf(stylesheets=stylesheets)
+    
+
+    def generar_qr_base64(self):
+        # Construye la URL según el registro
+        url = f"https://plataforma.anticorrupcion.org/s1?declara={self.id}"
+
+        # Generar imagen QR
+        qr_img = qrcode.make(url)
+
+        buffer = io.BytesIO()
+        qr_img.save(buffer, format="PNG")
+        base64_img = base64.b64encode(buffer.getvalue()).decode("utf-8")
+        return f"data:image/png;base64,{base64_img}"
