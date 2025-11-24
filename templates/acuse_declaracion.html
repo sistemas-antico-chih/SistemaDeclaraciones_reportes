@@ -8,18 +8,34 @@
 
 <body>
   <span id="declarationType">
-    {% if tipoDeclaracion == 'AVISO' %}
-      Declaración {{ tipoDeclaracion }}
-    {% else %}
-      Declaración
-      {{ tipoDeclaracion | replace('MODIFICACION','MODIFICACIÓN') | replace('CONCLUSION','CONCLUSIÓN') }}
-      {{ declaracionCompleta ? 'completa' : 'simple' }}
 
-      {% if tipoDeclaracion == 'MODIFICACION' and updatedAt and updatedAt.month != 5 %}
-        EXTEMPORÁNEA
-      {% endif %}
+  {% if tipoDeclaracion == 'AVISO' %}
+
+    Declaración {{ tipoDeclaracion }}
+
+  {% else %}
+
+    Declaración 
+    {{ tipoDeclaracion 
+        | replace('MODIFICACION','MODIFICACIÓN') 
+        | replace('CONCLUSION','CONCLUSIÓN') 
+    }}
+
+    {% if declaracionCompleta %}
+      completa
+    {% else %}
+      simple
     {% endif %}
-  </span>
+
+    {# --- Reglas para EXTEMPORÁNEA --- #}
+    {% if tipoDeclaracion == 'MODIFICACION' and updatedAt and updatedAt.month != 5 %}
+      EXTEMPORÁNEA
+    {% endif %}
+
+  {% endif %}
+
+</span>
+
 
   {% if datosGenerales%}
   <!-- Situación patrimonial -->
