@@ -1,11 +1,11 @@
 <article>
     <h2 class="text-center">
-        <img src="{{ qr_code }}" style="width:120px; height:120px;">
         {{ ente_publico }} <br>
         {{ acuse.tipo_declaracion }} {{ anioEjercicio }}. <br>
         <!-- ID DE DECLARACIÓN: {{ _id }} <br>-->
         ID DE DECLARACIÓN: {% if declaraciones is defined%} {{ declaraciones }} {% else %} {{ _id }} {% endif %} <br>
         {{ lugar }} {{ updatedAt | formatdatetime('%d de %B de %Y') | dateTranslation }}
+        <img src="{{ qr_code }}" style="width:120px; height:120px;">
     </h2>
     <ul class="no-decoration mt-80px">
         <li class="bold">C. {{datosGenerales.nombre}} {{datosGenerales.primerApellido | dataEmpty}} {{datosGenerales.segundoApellido | dataEmpty}}</li>
