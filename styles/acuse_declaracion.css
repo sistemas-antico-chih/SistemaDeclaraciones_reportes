@@ -239,18 +239,3 @@ article .row:last-child .white-background {
     width: 120px;
     height: 120px;
 }
-
-
-
-.qr-container {
-    position: relative;
-    height: 0;
-}
-
-.qr-top-left {
-    position: absolute;
-    top: -10px;       /* ajusta si lo quieres más arriba */
-    left: 0;
-    width: 110px;     /* puedes ajustar tamaño */
-    height: 110px;
-}
