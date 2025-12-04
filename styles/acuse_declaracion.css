@@ -221,3 +221,36 @@ article .row:last-child .white-background {
   line-height: 1.5;
   text-align: justify;
 }
+
+
+.header-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.header-text {
+    padding-right: 150px; /* espacio para que no choque con el QR */
+}
+
+.qr-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+}
+
+
+
+.qr-container {
+    position: relative;
+    height: 0;
+}
+
+.qr-top-left {
+    position: absolute;
+    top: -10px;       /* ajusta si lo quieres más arriba */
+    left: 0;
+    width: 110px;     /* puedes ajustar tamaño */
+    height: 110px;
+}
