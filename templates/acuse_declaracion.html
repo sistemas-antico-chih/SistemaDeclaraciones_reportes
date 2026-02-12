@@ -36,6 +36,21 @@
       EXTEMPORÁNEA
     {% endif %}
 
+    {# --- Validación EXTEMPORÁNEA para declaraciones distintas a MODIFICACION --- #}
+    {% if tipoDeclaracion != 'MODIFICACION'
+      and datosEmpleoCargoComision.fechaTomaPosesion is defined
+      and datosEmpleoCargoComision.fechaTomaPosesion
+    %}
+    {% set hoy = "now"|date("U") %}
+    {% set fechaToma = datosEmpleoCargoComision.fechaTomaPosesion|date("U") %}
+    {% set diferenciaDias = (hoy - fechaToma) / 86400 %}
+
+    {% if diferenciaDias >= 61 %}
+        EXTEMPORÁNEA
+    {% endif %}
+{% endif %}
+
+
   {% endif %}
 
 </span>
