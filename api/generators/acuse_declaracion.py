@@ -56,7 +56,27 @@ class AcuseDeclaracionGenerator(object):
         self.addJson()
         # 👇 AQUÍ ES DONDE VA
         from datetime import datetime, timezone
-        self.data["hoy_ts"] = datetime.now(timezone.utc).timestamp()
+
+        es_extemporanea = False
+
+        tipo = self.data.get("tipoDeclaracion")
+        fecha_toma = self.data.get("datosEmpleoCargoComision", {}).get("fechaTomaPosesion")
+
+        if tipo != "MODIFICACION" and fecha_toma:
+            fecha_dt = datetime.strptime(fecha_toma, "%Y-%m-%dT%H:%M:%S.%fZ")
+            fecha_dt = fecha_dt.replace(tzinfo=timezone.utc)
+
+            hoy = datetime.now(timezone.utc)
+
+            diferencia_dias = (hoy - fecha_dt).days
+
+            if diferencia_dias >= 61:
+                es_extemporanea = True
+
+        # 👇 Se manda al template
+        self.data["esExtemporanea"] = es_extemporanea
+
+        
         self.data["qr_code"] = self.generar_qr_base64()
         body_html: str = template.render(self.data)
 
