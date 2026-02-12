@@ -42,20 +42,16 @@
       and datosEmpleoCargoComision.fechaTomaPosesion
     %}
 
-    {# Fecha actual #}
-    {% set hoy = now().timestamp() %}
-
-    {# Convertir ISODate a timestamp (quitando la Z) #}
     {% set fechaToma = strptime(
         datosEmpleoCargoComision.fechaTomaPosesion[:19],
         "%Y-%m-%dT%H:%M:%S"
     ).timestamp() %}
 
-    {% set diferenciaDias = (hoy - fechaToma) / 86400 %}
+    {% set diferenciaDias = (hoy_ts - fechaToma) / 86400 %}
 
-    {% if diferenciaDias >= 61 %}
+      {% if diferenciaDias >= 61 %}
         EXTEMPORÁNEA
-    {% endif %}
+      {% endif %}
 
     {% endif %}
   {% endif %}

@@ -54,6 +54,9 @@ class AcuseDeclaracionGenerator(object):
             templateName = 'templates/publico/acuse_declaracion.html'
         template = env.get_template(templateName)
         self.addJson()
+        # 👇 AQUÍ ES DONDE VA
+        from datetime import datetime, timezone
+        self.data["hoy_ts"] = datetime.now(timezone.utc).timestamp()
         self.data["qr_code"] = self.generar_qr_base64()
         body_html: str = template.render(self.data)
 
