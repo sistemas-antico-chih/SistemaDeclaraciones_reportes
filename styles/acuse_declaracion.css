@@ -22,17 +22,21 @@
   }
 
   @top-right {
-    content: string(heading-right);
-    height: 25pt;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: solid 2px #34b3eb;
-    font-size: 10pt;
-    line-height: 15pt;
-    text-align: right;
-    font-weight: bold;
-    width: 350px;
-  }
+  content: string(heading-right);
+  height: 25pt;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: solid 2px #34b3eb;
+  font-size: 10pt;
+  line-height: 15pt;
+  text-align: right;
+  font-weight: bold;
+  width: 350px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
   @bottom-right {
     content: counter(page) " / "counter(pages);
