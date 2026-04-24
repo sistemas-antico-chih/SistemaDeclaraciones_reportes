@@ -31,11 +31,7 @@
   line-height: 15pt;
   text-align: right;
   font-weight: bold;
-  width: 350px;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  width: 450px;
 }
 
   @bottom-right {
