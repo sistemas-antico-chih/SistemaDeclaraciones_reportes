@@ -21,7 +21,7 @@
           <div class="column right-size text-justify text-light white-background">{% for titular in item.titular %}{{titular.valor}}{% if not loop.last %}<br>{% endif %}{% endfor %}</div>
         </div>
 
-        {% if item.tercero[0].tipoPersona and item.tercero[0].tipoPersona == 'MORAL' %}
+        {% if item.tercero and item.tercero|length > 0 and item.tercero[0].tipoPersona == 'MORAL' %}
           <div class="row white-background-wd-100">
             <h4 class="text-left no-margin">Tercero</h4>
           </div>
@@ -42,7 +42,7 @@
           {% endfor %}
         {% endif %}
 
-        {% if item.transmisor[0].tipoPersona == 'MORAL'%}
+        {% if item.transmisor and item.transmisor|length > 0 and item.transmisor[0].tipoPersona == 'MORAL' %}
           <div class="row white-background-wd-100">
             <h4 class="text-left no-margin">Transmisor</h4>
           </div>
