@@ -26,13 +26,8 @@
       simple
     {% endif %}
 
-    {# --- Obtener mes desde string ISO --- #}
-    {% if updatedAt %}
-      {% set mes = updatedAt[5:7] %}
-    {% endif %}
-
     {# --- Validación EXTEMPORÁNEA solo si NO es mayo --- #}
-    {% if tipoDeclaracion == 'MODIFICACION' and mes != '05' %}
+    {% if tipoDeclaracion == 'MODIFICACION' and mesLocal != '05' %}
       EXTEMPORÁNEA
     {% endif %}
 

@@ -35,7 +35,7 @@ def format_datetime(value, format="%d/%m/%Y"):
     if value is None:
         return ""
     new_date =  datetime.datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%fZ")
-    return new_date.astimezone(  timezone('America/Mexico_City')  ).strftime(format)
+    return new_date.astimezone(  timezone('America/Chihuahua')  ).strftime(format)
     # return datetime.datetime.strptime(value[:10], "%Y-%m-%d").strftime(format)
 
 def nationalityFormatPipe(value):

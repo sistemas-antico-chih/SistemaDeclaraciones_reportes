@@ -54,6 +54,24 @@ class AcuseDeclaracionGenerator(object):
             templateName = 'templates/publico/acuse_declaracion.html'
         template = env.get_template(templateName)
         self.addJson()
+        from pytz import timezone
+        from datetime import datetime
+
+        fecha_firma = self.data.get("updatedAt")
+
+        if fecha_firma:
+            fecha_firma_dt = datetime.strptime(
+                fecha_firma,
+                "%Y-%m-%dT%H:%M:%S.%fZ"
+            )
+
+            fecha_firma_local = fecha_firma_dt.astimezone(
+                timezone("America/Chihuahua")
+            )
+
+            self.data["mesLocal"] = fecha_firma_local.strftime("%m")
+            self.data["fechaFirmaLocal"] = fecha_firma_local.strftime("%Y-%m-%d %H:%M:%S")
+        
         # 👇 AQUÍ ES DONDE VA
         from datetime import datetime, timezone
 
