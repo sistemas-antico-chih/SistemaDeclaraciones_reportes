@@ -75,29 +75,10 @@ class AcuseDeclaracionGenerator(object):
         # 👇 AQUÍ ES DONDE VA
         from datetime import datetime, timezone
 
-        es_extemporanea = False
-
-        tipo = self.data.get("tipoDeclaracion")
-        fecha_toma = self.data.get("datosEmpleoCargoComision", {}).get("fechaTomaPosesion")
-
-        fecha_firma = self.data.get("updatedAt")
-
-        if tipo != "MODIFICACION" and fecha_toma and fecha_firma:
-            fecha_toma_dt = datetime.strptime(
-                fecha_toma, "%Y-%m-%dT%H:%M:%S.%fZ"
-            ).replace(tzinfo=timezone.utc)
-
-            fecha_firma_dt = datetime.strptime(
-                fecha_firma, "%Y-%m-%dT%H:%M:%S.%fZ"
-            ).replace(tzinfo=timezone.utc)
-
-            diferencia_dias = (fecha_firma_dt - fecha_toma_dt).days
-
-            if diferencia_dias >= 61:
-                es_extemporanea = True
-
-        # 👇 Se manda al template
-        self.data["esExtemporanea"] = es_extemporanea
+        self.data["esExtemporanea"] = self.data.get(
+            "esExtemporanea",
+            False
+        )
         
         self.data["qr_code"] = self.generar_qr_base64()
         body_html: str = template.render(self.data)

@@ -26,12 +26,6 @@
       simple
     {% endif %}
 
-    {# --- Validación EXTEMPORÁNEA solo si NO es mayo --- #}
-    {% if tipoDeclaracion == 'MODIFICACION' and mesLocal != '05' %}
-      EXTEMPORÁNEA
-    {% endif %}
-
-    {# --- Validación EXTEMPORÁNEA para declaraciones distintas a MODIFICACION --- #}
     {% if esExtemporanea %}
       EXTEMPORÁNEA
     {% endif %}
