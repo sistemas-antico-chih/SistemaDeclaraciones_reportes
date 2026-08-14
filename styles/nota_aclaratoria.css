@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,700");
+
+@page {
+    size: Letter;
+    margin: 2.5cm 2cm 2cm 2cm;
+
+    @bottom-left {
+        content: "Declaraciones Patrimoniales de Servidores Públicos";
+        font-family: "Noto Sans", Arial, sans-serif;
+        font-size: 8pt;
+        color: #848483;
+    }
+
+    @bottom-right {
+        content: counter(page) " / " counter(pages);
+        font-family: "Noto Sans", Arial, sans-serif;
+        font-size: 8pt;
+        color: #848483;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    font-family: "Noto Sans", Arial, sans-serif;
+    color: rgba(96, 96, 96, 0.87);
+}
+
+
+body {
+    margin: 0;
+    font-size: 10pt;
+    text-transform: uppercase;
+}
+
+
+.documento {
+    width: 100%;
+}
+
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+.encabezado {
+    border-bottom: 2px solid #34b3eb;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+}
+
+
+.titulo {
+    font-size: 20pt;
+    font-weight: 500;
+    color: #1b9be5;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+
+.subtitulo {
+    font-size: 9pt;
+    font-weight: 400;
+    color: #848483;
+    text-align: center;
+}
+
+
+/* =========================================
+   SECCIONES
+   ========================================= */
+
+.titulo-seccion {
+    background-color: #54b4eb;
+    color: #ffffff;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 8px 10px;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   INFORMACIÓN
+   ========================================= */
+
+.informacion {
+    margin-bottom: 25px;
+}
+
+
+.fila {
+    display: flex;
+    width: 100%;
+}
+
+
+.campo {
+    border-bottom: 1px solid #54b4eb;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+}
+
+
+.campo-id {
+    width: 65%;
+    margin-right: 10px;
+}
+
+
+.campo-fecha {
+    width: 35%;
+}
+
+
+.nombre {
+    width: 100%;
+}
+
+
+.etiqueta {
+    display: block;
+    font-size: 7.5pt;
+    font-weight: bold;
+    color: #1b9be5;
+    margin-bottom: 4px;
+}
+
+
+.valor {
+    display: block;
+    font-size: 10pt;
+    color: #606060;
+    word-wrap: break-word;
+}
+
+
+/* =========================================
+   NOTA
+   ========================================= */
+
+.nota-container {
+    margin-top: 20px;
+}
+
+
+.nota {
+    min-height: 220px;
+    border: 1px solid #54b4eb;
+    padding: 20px;
+
+    font-size: 10pt;
+    line-height: 1.7;
+
+    text-align: justify;
+
+    white-space: pre-wrap;
+
+    text-transform: none;
+}
+
+
+/* =========================================
+   FIRMA
+   ========================================= */
+
+.firma {
+    margin-top: 70px;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.linea-firma {
+    border-top: 1px solid #606060;
+    margin-bottom: 8px;
+}
+
+
+.texto-firma {
+    font-size: 8pt;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   LEYENDA
+   ========================================= */
+
+.leyenda {
+    margin-top: 45px;
+    font-size: 7.5pt;
+    color: #848483;
+    text-align: center;
+    line-height: 1.4;
+    text-transform: none;
+}

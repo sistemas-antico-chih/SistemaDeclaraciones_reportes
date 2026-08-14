@@ -5,6 +5,7 @@ from flask_cors import CORS
 from flask_restful import Api
 
 from api.acuse_declaracion import AcuseDeclaracion
+from api.nota_aclaratoria import NotaAclaratoria
 
 
 class App:
@@ -16,7 +17,16 @@ class App:
 
     def _setup(self):
         CORS(self.app)
-        self.api.add_resource(AcuseDeclaracion, '/acuse-declaracion')
+
+        self.api.add_resource(
+            AcuseDeclaracion,
+            '/acuse-declaracion'
+        )
+
+        self.api.add_resource(
+            NotaAclaratoria,
+            '/nota-aclaratoria'
+        )
 
     def run(self):
         self.app.run(port=self.port, debug=True, host='0.0.0.0')
