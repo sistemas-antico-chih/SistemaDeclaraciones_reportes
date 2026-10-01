@@ -3,116 +3,286 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Nota Aclaratoria</title>
+    <title>Acuse de Nota Aclaratoria</title>
 </head>
 
 <body>
 
-    <div class="documento">
+    <!-- =====================================================
+         ENCABEZADO QUE WEASYPRINT REPITE EN CADA PÁGINA
+         ===================================================== -->
 
-        <div class="encabezado">
+    <div class="encabezado-pagina">
+        {{ encabezado }}
+    </div>
 
-            <div class="titulo">
-                NOTA ACLARATORIA
+
+    <!-- =====================================================
+         PÁGINA 1
+         ===================================================== -->
+
+    <div class="page">
+
+        <div class="titulo-documento">
+            ACUSE DE NOTA ACLARATORIA
+            SOBRE LA DECLARACIÓN
+            {{ tipoDeclaracion }}
+            {{ forma }}
+            {{ temporalidad }}
+        </div>
+
+        <div class="ente">
+            {{ nombreEntePublico }}
+        </div>
+
+        <div class="subtitulo">
+            NOTA ACLARATORIA SOBRE LA DECLARACIÓN
+            {{ tipoDeclaracion }}
+            {{ anioEjercicio }}
+        </div>
+
+        <div class="id-nota">
+            ID DE DECLARACIÓN:
+            {{ id }}
+            &nbsp;&nbsp;&nbsp;
+            NOTA ACLARATORIA No. {{ numeroNota }}
+        </div>
+
+        <div class="dato">
+            <span class="etiqueta">
+                {{ municipio }}, CHIH.
+            </span>
+
+            {{ fecha }}
+        </div>
+
+        <div class="dato">
+            C.
+            <span class="etiqueta">
+                {{ nombreCompleto }}
+            </span>
+        </div>
+
+        <div class="dato">
+            <span class="etiqueta">
+                CURP:
+            </span>
+            {{ curp }}
+        </div>
+
+        <div class="dato">
+            <span class="etiqueta">
+                RFC:
+            </span>
+            {{ rfc }}
+        </div>
+
+        <div class="dato">
+            <span class="etiqueta">
+                E-MAIL:
+            </span>
+            {{ correoPersonal }}
+        </div>
+
+        <div class="dato">
+            PRESENTE. –
+        </div>
+
+        <p class="parrafo">
+
+            CON ESTA FECHA SE REGISTRÓ NOTA ACLARATORIA,
+            EN LA SECCIÓN {{ seccion }}, EN SU DECLARACIÓN
+            DE {{ tipoDeclaracion }} DEL {{ anioEjercicio }}
+            PREVIAMENTE REGISTRADA, PRESENTADA BAJO PROTESTA
+            DE DECIR VERDAD, EN CUMPLIMIENTO A LO DISPUESTO
+            EN LOS ARTÍCULOS 108 DE LA CONSTITUCIÓN POLÍTICA
+            DE LOS ESTADOS UNIDOS MEXICANOS, 34 Y 48 DE LA
+            LEY GENERAL DE RESPONSABILIDADES ADMINISTRATIVAS
+            DE LA QUE SE ACUSA DE RECIBO.
+
+        </p>
+
+        <p class="parrafo">
+
+            LA NOTA ACLARATORIA, EN LA SECCIÓN {{ seccion }},
+            EN LA DECLARACIÓN DE SITUACIÓN PATRIMONIAL Y DE
+            INTERESES PREVIAMENTE IDENTIFICADA, HA SIDO
+            PRESENTADA DE MANERA ELECTRÓNICA SIENDO FIRMADA
+            Y ENVIADA MEDIANTE EL USO DE USUARIO Y CONTRASEÑA
+            EN TÉRMINOS DE LA QUINTA Y NOVENA DE LAS NORMAS
+            E INSTRUCTIVO PARA EL LLENADO Y PRESENTACIÓN DEL
+            FORMATO DE DECLARACIONES: DE SITUACIÓN PATRIMONIAL
+            Y DE INTERESES, PUBLICADAS EN EL DIARIO OFICIAL
+            DE LA FEDERACIÓN EL 23 DE SEPTIEMBRE DE 2019.
+
+        </p>
+
+        <div class="atentamente">
+            ATENTAMENTE
+        </div>
+
+        <div class="firma-oic">
+
+            <div class="linea"></div>
+
+            <div class="nombre">
+                {{ titularOIC }}
             </div>
 
-            <div class="subtitulo">
-                DECLARACIONES PATRIMONIALES DE SERVIDORES PÚBLICOS
+            <div class="cargo">
+                {{ cargoTitularOIC }}
             </div>
 
         </div>
 
+    </div>
 
-        <div class="informacion">
 
-            <div class="titulo-seccion">
-                DATOS DE LA NOTA ACLARATORIA
+    <!-- =====================================================
+         PÁGINA 2
+         ===================================================== -->
+
+    <div class="page">
+
+        <div class="fup-titulo">
+            PROCESO DE FIRMADO Y ENVÍO DE LA NOTA ACLARATORIA (FUP)
+        </div>
+
+        <p class="parrafo">
+
+            CONDICIONES GENERALES PARA PODER FIRMAR Y ENVIAR
+            ESTA NOTA ACLARATORIA UTILIZANDO USUARIO Y
+            CONTRASEÑA, ES NECESARIO LEER Y ACEPTAR LAS
+            SIGUIENTES CONDICIONES GENERALES:
+
+        </p>
+
+        <p class="condiciones">
+
+            CON FUNDAMENTO EN LOS ARTÍCULOS 108 Y 109 DE LA
+            CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS;
+            1, 2, FRACCIÓN I, 4, FRACCIÓN I, 9, 29, 32, 33,
+            34, 35, 46, PRIMER PÁRRAFO, 47 Y 48 DE LA LEY
+            GENERAL DE RESPONSABILIDADES ADMINISTRATIVAS,
+            PUBLICADA EN EL DIARIO OFICIAL DE LA FEDERACIÓN
+            EL DIECIOCHO DE JULIO DE DOS MIL DIECISÉIS, EN EL
+            ACUERDO POR EL QUE EL COMITÉ COORDINADOR DEL SISTEMA
+            NACIONAL ANTICORRUPCIÓN EMITE EL FORMATO DE
+            DECLARACIONES: DE SITUACIÓN PATRIMONIAL Y DE
+            INTERESES; Y EXPIDE LAS NORMAS E INSTRUCTIVO PARA
+            SU LLENADO Y PRESENTACIÓN, PUBLICADO EN EL DIARIO
+            OFICIAL DE LA FEDERACIÓN EL DIECISÉIS DE NOVIEMBRE
+            DE DOS MIL DIECIOCHO, EN EL ACUERDO POR EL QUE SE
+            MODIFICAN LOS ANEXOS PRIMERO Y SEGUNDO DEL ACUERDO
+            POR EL QUE EL COMITÉ COORDINADOR DEL SISTEMA NACIONAL
+            ANTICORRUPCIÓN EMITE EL FORMATO DE DECLARACIONES:
+            DE SITUACIÓN PATRIMONIAL Y DE INTERESES; Y EXPIDE
+            LAS NORMAS E INSTRUCTIVO PARA SU LLENADO Y
+            PRESENTACIÓN, PUBLICADO EN EL DIARIO OFICIAL DE LA
+            FEDERACIÓN EL VEINTITRÉS DE SEPTIEMBRE DE DOS MIL
+            DIECINUEVE, POR EL QUE SE ESTABLECE QUE DE
+            CONFORMIDAD CON LOS ARTÍCULOS 34 Y 48 DE LA LEY,
+            LAS DECLARACIONES DE SITUACIÓN PATRIMONIAL Y DE
+            INTERESES DEBERÁN SER PRESENTADAS A TRAVÉS DE MEDIOS
+            ELECTRÓNICOS, EMPLEÁNDOSE E.FIRMA O USUARIO Y
+            CONTRASEÑA UTILIZADOS PARA INGRESAR AL SISTEMA DE
+            EVOLUCIÓN PATRIMONIAL DE LA PLATAFORMA DIGITAL DEL
+            ESTADO DE CHIHUAHUA (S1), Y EN VIRTUD DE HABER
+            OPTADO POR FIRMAR Y ENVIAR LA NOTA ACLARATORIA A
+            TRAVÉS DE MI USUARIO Y CONTRASEÑA UTILIZADOS PARA
+            INGRESAR AL CITADO SISTEMA (S1), PROCEDO A REALIZAR
+            LAS SIGUIENTES:
+
+        </p>
+
+        <div class="seccion-titulo">
+            DECLARACIONES
+        </div>
+
+        <ol class="lista-declaraciones">
+
+            <li>
+                TODA LA INFORMACIÓN QUE SE RECIBA CON MI USUARIO
+                Y CONTRASEÑA UTILIZADOS PARA INGRESAR AL SISTEMA
+                DE EVOLUCIÓN PATRIMONIAL DE LA PLATAFORMA DIGITAL
+                DEL ESTADO DE CHIHUAHUA (S1), ES AUTÉNTICA Y
+                ATRIBUIBLE A MI PERSONA, POR LO QUE SERÁ MI
+                EXCLUSIVA RESPONSABILIDAD, LA INFORMACIÓN QUE
+                ÉSTA RECIBA POR MEDIOS REMOTOS DE COMUNICACIÓN
+                ELECTRÓNICA, LA CUAL PRESENTO BAJO PROTESTA DE
+                DECIR VERDAD.
+            </li>
+
+            <li>
+                ACEPTO EL COMPROMISO DE GUARDAR MI CONTRASEÑA
+                DE MANERA RESPONSABLE, PUES ES ÚNICA Y EXCLUSIVA
+                PARA MI ACCESO AL SISTEMA ELECTRÓNICO CON LA
+                FINALIDAD DE PRESENTAR DECLARACIONES DE SITUACIÓN
+                PATRIMONIAL Y DE CONFLICTO DE INTERÉS A TRAVÉS
+                DEL SISTEMA DE EVOLUCIÓN PATRIMONIAL DE LA
+                PLATAFORMA DIGITAL DEL ESTADO DE CHIHUAHUA (S1).
+            </li>
+
+        </ol>
+
+    </div>
+
+
+    <!-- =====================================================
+         PÁGINA 3
+         ===================================================== -->
+
+    <div class="page">
+
+        <div class="fup-titulo">
+            PROCESO DE FIRMADO Y ENVÍO DE LA NOTA ACLARATORIA (FUP)
+        </div>
+
+        <div class="seccion-titulo">
+            DECLARACIONES
+        </div>
+
+        <ol class="lista-declaraciones" start="3">
+
+            <li>
+                EN VIRTUD DE ESTAR DE ACUERDO CON LAS CONDICIONES
+                ANTES SEÑALADAS, FIRMO AUTÓGRAFAMENTE EL PRESENTE
+                DOCUMENTO, MISMO QUE ME COMPROMETO A PRESENTAR
+                ANTE EL ÓRGANO INTERNO DE CONTROL O EN LA UNIDAD
+                DE RESPONSABILIDADES DE LA DEPENDENCIA, ENTIDAD
+                O INSTITUCIÓN EN LA QUE PRESTO O HAYA PRESTADO
+                MIS SERVICIOS, DENTRO DE LOS QUINCE DÍAS HÁBILES
+                SIGUIENTES AL ENVÍO DE LA PRESENTE NOTA
+                ACLARATORIA, ACOMPAÑADO DE UNA COPIA DEL ACUSE
+                DE RECIBO GENERADO POR EL SISTEMA ANTES MENCIONADO.
+            </li>
+
+        </ol>
+
+        <div class="aceptacion">
+
+            HE LEÍDO Y ACEPTO LAS CONDICIONES DESCRITAS.
+
+        </div>
+
+        <div class="firma-declarante">
+
+            <div class="linea"></div>
+
+            <div class="nombre">
+                {{ nombreCompleto }}
             </div>
 
-            <div class="fila">
-
-                <div class="campo campo-id">
-                    <span class="etiqueta">
-                        ID DE LA DECLARACIÓN
-                    </span>
-
-                    <span class="valor">
-                        {{ id }}
-                    </span>
-                </div>
-
-                <div class="campo campo-fecha">
-                    <span class="etiqueta">
-                        FECHA
-                    </span>
-
-                    <span class="valor">
-                        {{ fecha }}
-                    </span>
-                </div>
-
-            </div>
-
-
-            <div class="campo nombre">
-
-                <span class="etiqueta">
-                    NOMBRE DEL DECLARANTE
-                </span>
-
-                <span class="valor">
-                    {{ nombre }}
-                </span>
-
-            </div>
-
-
-            <div class="campo">
-
-                <span class="etiqueta">
-                    SECCIÓN
-                </span>
-
-                <span class="valor">
-                    {{ seccion }}
-                </span>
-
+            <div>
+                DECLARANTE
             </div>
 
         </div>
 
-
-        <div class="nota-container">
-
-            <div class="titulo-seccion">
-                NOTA ACLARATORIA
-            </div>
-
-            <div class="nota">
-
-                {{ nota }}
-
-            </div>
-
-        </div>
-
-
-        <div class="firma">
-
-            <div class="linea-firma"></div>
-
-            <div class="texto-firma">
-                NOMBRE DEL DECLARANTE
-            </div>
-
-        </div>
-
-
-        <div class="leyenda">
-
-            Documento generado electrónicamente por el Sistema de
-            Declaraciones Patrimoniales de Servidores Públicos.
-
+        <div class="id-nota">
+            ID DE DECLARACIÓN: {{ id }}
+            &nbsp;&nbsp;&nbsp;
+            NOTA ACLARATORIA No. {{ numeroNota }}
         </div>
 
     </div>
