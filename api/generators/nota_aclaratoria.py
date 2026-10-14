@@ -66,7 +66,7 @@ class NotaAclaratoriaGenerator(object):
         forma = (
             'COMPLETA'
             if self.declaracion_completa
-            else 'SIMPLE'
+            else 'SIMPLIFICADA'
         )
 
         temporalidad = (
@@ -77,9 +77,40 @@ class NotaAclaratoriaGenerator(object):
 
         tipo = self.tipo_declaracion
 
+
+        secciones_legibles = {
+            'datosGenerales': 'Datos Generales',
+            'domicilioDeclarante': 'Domicilio del Declarante',
+            'datosEmpleoCargoComision': 'Datos del Empleo, Cargo o Comisión',
+            'experienciaLaboral': 'Experiencia Laboral',
+            'datosPareja': 'Datos de la Pareja',
+            'datosDependientesEconomicos': 'Datos de Dependientes Económicos',
+            'ingresos': 'Ingresos',
+            'actividadAnualAnterior': 'Actividad Anual Anterior',
+            'bienesInmuebles': 'Bienes Inmuebles',
+            'vehiculos': 'Vehículos',
+            'bienesMuebles': 'Bienes Muebles',
+            'inversionesCuentasValores': 'Inversiones, Cuentas y Valores',
+            'adeudosPasivos': 'Adeudos y Pasivos',
+            'prestamoComodato': 'Préstamo o Comodato',
+            'participacionEmpresasSociedades': 'Participación en Empresas, Sociedades o Asociaciones',
+            'participacionTomaDecisiones': 'Participación en la Toma de Decisiones',
+            'apoyosBeneficiosPublicos': 'Apoyos o Beneficios Públicos',
+            'representacion': 'Representación',
+            'clientesPrincipales': 'Clientes Principales',
+            'beneficiosPrivados': 'Beneficios Privados',
+            'fideicomisos': 'Fideicomisos'
+        }
+
+        seccion_legible = secciones_legibles.get(
+            self.seccion,
+            self.seccion
+        )
+
+
         encabezado = (
             f'ACUSE DE NOTA ACLARATORIA SOBRE LA DECLARACIÓN '
-            f'{tipo} {forma} {temporalidad} {self.anio_ejercicio}'
+            f'{tipo} {forma} {self.anio_ejercicio}'
         )
 
         datos = {
@@ -115,7 +146,7 @@ class NotaAclaratoriaGenerator(object):
             'municipio': self.municipio,
 
             'fecha': self.fecha,
-            'seccion': self.seccion,
+            'seccion': self.seccion_legible,
             'nota': self.nota,
 
             'titularOIC': self.titular_oic,

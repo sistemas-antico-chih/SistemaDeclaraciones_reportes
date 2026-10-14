@@ -204,10 +204,12 @@ body {
     font-weight: bold;
 }
 
+
 .id-nota {
     margin-top: 15px;
-    text-align: center;
+    text-align: left;
     font-size: 9pt;
+    line-height: 1.5;
 }
 
 
