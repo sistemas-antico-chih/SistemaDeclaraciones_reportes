@@ -79,7 +79,7 @@ class NotaAclaratoriaGenerator(object):
 
         encabezado = (
             f'ACUSE DE NOTA ACLARATORIA SOBRE LA DECLARACIÓN '
-            f'{tipo} {forma} {temporalidad}'
+            f'{tipo} {forma} {temporalidad} {self.anio_ejercicio}'
         )
 
         datos = {

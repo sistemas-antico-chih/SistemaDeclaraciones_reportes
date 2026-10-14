@@ -147,12 +147,25 @@ body {
     margin-top: 5px;
 }
 
-.fup-titulo {
-    text-align: center;
-    font-size: 13pt;
-    font-weight: bold;
-    margin-bottom: 25px;
+
+.introduccion-fup {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 9pt;
+    line-height: 1.5;
+    font-weight: normal;
+    text-align: justify;
 }
+
+.subtitulo-condiciones {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 9pt;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: justify;
+}
+
 
 .condiciones {
     font-size: 9pt;
