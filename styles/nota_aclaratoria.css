@@ -209,3 +209,11 @@ body {
     text-align: center;
     font-size: 9pt;
 }
+
+
+.fup-titulo {
+    text-align: center;
+    font-size: 13pt;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
