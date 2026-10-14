@@ -146,7 +146,7 @@ class NotaAclaratoriaGenerator(object):
             'municipio': self.municipio,
 
             'fecha': self.fecha,
-            'seccion': self.seccion_legible,
+            'seccion': self.seccion,
             'nota': self.nota,
 
             'titularOIC': self.titular_oic,
