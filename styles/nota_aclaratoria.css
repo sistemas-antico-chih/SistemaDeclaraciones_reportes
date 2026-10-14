@@ -217,3 +217,20 @@ body {
     font-weight: bold;
     margin-bottom: 25px;
 }
+
+
+/* Continuación explícita de la numeración en la página 3 */
+.lista-declaraciones-continuacion {
+    list-style: none;
+}
+
+.lista-declaraciones-continuacion li {
+    list-style: none;
+    position: relative;
+}
+
+.lista-declaraciones-continuacion li::before {
+    content: "3.";
+    position: absolute;
+    left: -25px;
+}
